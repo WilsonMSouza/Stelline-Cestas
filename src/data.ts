@@ -1,8 +1,8 @@
 import { Product, AddonItem } from "./types";
 // @ts-ignore
-import cestaAmanhecerImg from "./assets/images/cesta_amanhecer_1780937807544.png";
+import cestaAmanhecerImg from "./assets/images/Cesta_Amanhecer_(final).png";
 // @ts-ignore
-import cestaAmanhecerPremiumImg from "./assets/images/cesta_amanhecer_premium_1780954971342.png";
+import cestaAmanhecerPremiumImg from "./assets/images/Cesta_Amanhecer_premium_(final).png";
 
 export const PRODUCTS: Product[] = [
   {
