@@ -1,0 +1,6 @@
+{
+  "name": "STELLINE Cestas de Café",
+  "description": "Celestial Luxury Artisanal Experience - Cestas de café da manhã e presentes de luxo artesanais.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
