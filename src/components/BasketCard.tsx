@@ -50,6 +50,7 @@ export default function BasketCard({ product, onAddToCart }: BasketCardProps) {
         <img
           src={product.image}
           alt={product.name}
+          referrerPolicy="no-referrer"
           className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-102"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-transparent to-transparent opacity-60"></div>

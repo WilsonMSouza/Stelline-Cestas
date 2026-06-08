@@ -1,6 +1,8 @@
 import { Product, AddonItem } from "./types";
 // @ts-ignore
 import cestaAmanhecerImg from "./assets/images/cesta_amanhecer_1780937807544.png";
+// @ts-ignore
+import cestaAmanhecerPremiumImg from "./assets/images/cesta_amanhecer_premium_1780954971342.png";
 
 export const PRODUCTS: Product[] = [
   {
@@ -56,7 +58,7 @@ export const PRODUCTS: Product[] = [
     name: "Amanhecer Premium",
     tagline: "Sabor refinado de micro lotes",
     description: "Nossa consagrada seleção de croissants amanteigados folhados, frios especiais fatiados, geleia artesanal, drip coffee especial gourmet e muito mais.",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCplKoz1qvYoI07wceJ61tErOcYHAl-gPWLv-3Xcz8ephO9Af0Nc9BRCo78_nIlCzJCt-JviuY6xXfvdpQEKWLgU6-Zm9ZtTN0UtjccTuF0QOEzUc2MoyASRQt7_fNOXlwdp8tp84__axL1CBgrC0fD9NLMpa8FQw8NuAp3Vb9eFI-Jzu8e0TcGAZtV08ecuC-kDojtawluLw_F3uEmf5mv1tujLZgsnsOO1RH4npIVdHlAJTOZ0_96ZZ7-iWHYKKrfC_Y7CelcFjw",
+    image: cestaAmanhecerPremiumImg,
     sizes: [
       { 
         label: "Tamanho M Único", 
