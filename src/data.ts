@@ -160,42 +160,29 @@ export const PRODUCTS: Product[] = [
     ]
   },
   {
-    id: "cesta-entardecer-vinho",
-    name: "Cesta Entardecer & Vinho",
-    tagline: "Celebração fina sob as cores do sol",
-    description: "Uma garrafa de vinho tinto seco reserva selecionado, queijos finos curados fatiados na hora, finas brusquetas de ervas, porção generosa de damascos doces e castanhas nobres.",
-    image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&q=80&w=800",
-    badge: "Ideal para Casais",
+    id: "cesta-kids",
+    name: "Cesta Kids",
+    tagline: "A diversão e o sabor que encantam",
+    description: "Uma experiência criada para encantar os pequenos com sabores, cores e diversão. A Cesta Kids reúne croissant amanteigado, pão de queijo, doces especiais, frutas frescas e uma seleção cuidadosamente escolhida de acompanhamentos que equilibram sabor e delicadeza. Com queijo decorativo, creme de avelã, iogurte grego, bebida infantil e detalhes lúdicos que despertam a imaginação, cada item foi pensado para transformar a surpresa em um momento inesquecível.",
+    image: cestaKidsImg,
     sizes: [
       {
         label: "Tamanho P",
         shortLabel: "Tam. P",
-        price: 195.00,
-        description: "O aconchego perfeito e porção sob medida para uma degustação de vinho refinada.",
+        price: 189.00,
+        description: "Pequenos momentos, grandes sorrisos (serve 1 pessoa).",
         items: [
-          "1 Garrafa de Vinho Tinto Reserva Importado (375ml)",
-          "Queijo Gouda Curado Regional (100g)",
-          "Salaminho Italiano Colonial fatiado (50g)",
-          "Uvas fresquinhas sem semente selecionadas",
-          "Torradas finas artesanais com ervas da casa",
-          "Damascos Macios Importados adocicados"
+          "Croissant amanteigado e Pão de queijo",
+          "Donuts ou cookie, coopcake, stroopwafel",
+          "Queijo muçarela com recorte decorativo",
+          "Salame italiano e lombo canadense",
+          "Frutas da época, creme de avelã e iogurte grego",
+          "Suco de uva integral (250 a 300 ml) ou achocolatado",
+          "Doces decorativos",
+          "Opção de Embalagem 1: Caixa de MDF 20x20cm, embalada em celofane e finalizada com laço de cetim; acompanha cartão de mensagem.",
+          "Opção de Embalagem 2: Sacola fosca de alça redonda, 27x23cm, finalizada com laço de cetim; acompanha cartão de mensagem."
         ]
       },
-      {
-        label: "Tamanho M",
-        shortLabel: "Tam. M",
-        price: 280.00,
-        description: "Experiência completa para duas pessoas brindarem a vida com maravilhosa charcutaria.",
-        items: [
-          "1 Garrafa de Vinho Tinto Cabernet Sauvignon (750ml)",
-          "2 Taças de Cristal lapidadas exclusivas",
-          "Tábua de Queijos Nobres (Brie, Gouda e Parmesão)",
-          "Copa Curada e Parmesão em lascas (120g)",
-          "Geleia Premium de Frutas Vermelhas (120g)",
-          "Castanhas de Caju e Amêndoas crocantes torradas",
-          "Grissinis salgados finos e torradas crocantes artesanais"
-        ]
-      }
     ]
   },
   {
