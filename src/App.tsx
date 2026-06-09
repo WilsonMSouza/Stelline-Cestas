@@ -559,7 +559,7 @@ export default function App() {
                 </span>
               </div>
               <p className="text-xs text-neutral-500 leading-relaxed font-sans max-w-sm">
-                Entrega de momentos mágicos e culinária afetuosa de alto padrão. Cestas de café da manhã gourmet e mimos em embalagens de madeira de reflorestamento com amor.
+                A combinação perfeita entre afeto e sofisticação. Cestas exclusivas, criadas sob medida para eternizar as suas melhores memórias.
               </p>
             </div>
 
