@@ -293,7 +293,7 @@ export function generateWhatsAppMessage(
   text += `📅 *Data:* ${orderDetails.deliveryDate || 'Não informada'}\n`;
   text += `🕒 *Horário:* ${orderDetails.deliveryTimeSlot || 'Não informado'}\n`;
   text += `💳 *Pagamento:* ${
-    orderDetails.paymentMethod === 'pix' ? 'Pix (100% antecipado)' :
+    orderDetails.paymentMethod === 'pix' ? 'Pix' :
     orderDetails.paymentMethod === 'transfer' ? 'Transferência Bancária' : 'Cartão de Crédito'
   }\n\n`;
 
@@ -317,7 +317,7 @@ export function generateWhatsAppMessage(
     text += `\n💌 *MENSAGEM DO CARTÃO DE PRESENTE:*\n_"${orderDetails.giftCardMessage}"_\n`;
   }
 
-  text += `\n💰 *VALOR TOTAL DA ENCOMENDA:* *${formatCurrency(totalPrice)}*`;
+  text += `\n💰 *VALOR DA ENCOMENDA:* *${formatCurrency(totalPrice)}*`;
 
   const encodedText = encodeURIComponent(text);
   return `https://wa.me/${phone}?text=${encodedText}`;
