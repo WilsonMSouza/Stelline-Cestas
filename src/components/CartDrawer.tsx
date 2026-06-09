@@ -275,10 +275,10 @@ export default function CartDrawer({
                 {/* Additional instructions/reminder */}
                 <div className="p-4 rounded-xl border border-amber-950/20 bg-amber-500/5 font-sans">
                   <h4 className="text-xs font-bold text-amber-400 uppercase tracking-wider mb-1">
-                    Cuidado Especial
+                    Atenção
                   </h4>
                   <p className="text-[11px] text-neutral-400 leading-relaxed">
-                    Personalizou tudo? Avance para a tela de agendamento para configurar onde e quando faremos essa entrega inesquecível em Cascavel - PR!
+                    Personalizou tudo? Avance para a tela de agendamento para configurar onde e quando faremos essa entrega inesquecível!
                   </p>
                 </div>
               </div>

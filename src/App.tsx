@@ -350,7 +350,7 @@ export default function App() {
               </h3>
               <div className="h-1 w-20 bg-amber-400 mt-4 mb-3 rounded-full"></div>
               <p className="text-sm text-neutral-400 max-w-lg font-sans">
-                Complemente e enriqueça a sua cesta com toques sensoriais adicionais e de pura festividade.
+                Complemente e enriqueça a sua cesta com itens adicionais.
               </p>
             </div>
 
