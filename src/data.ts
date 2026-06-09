@@ -295,7 +295,17 @@ export function generateWhatsAppMessage(
     text += `🏘️ *Bairro:* ${orderDetails.deliveryNeighborhood || 'Não informado'}\n`;
   }
   
-  text += `📅 *Data:* ${orderDetails.deliveryDate || 'Não informada'}\n`;
+  let formattedDate = 'Não informada';
+  if (orderDetails.deliveryDate) {
+    const dateParts = orderDetails.deliveryDate.split('-');
+    if (dateParts.length === 3) {
+      formattedDate = `${dateParts[2]}/${dateParts[1]}/${dateParts[0]}`;
+    } else {
+      formattedDate = orderDetails.deliveryDate;
+    }
+  }
+
+  text += `📅 *Data:* ${formattedDate}\n`;
   text += `🕒 *Horário:* ${orderDetails.deliveryTimeSlot || 'Não informado'}\n`;
   text += `💳 *Pagamento:* ${
     orderDetails.paymentMethod === 'pix' ? 'Pix' :
