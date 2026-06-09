@@ -93,7 +93,7 @@ export default function CartDrawer({
             <div className="flex items-center gap-3">
               <Gift className="w-5 h-5 text-amber-400" />
               <h2 className="font-serif text-xl sm:text-2xl text-neutral-100 tracking-tight">
-                Seu Pedido Sensorial
+                Seu Pedido
               </h2>
             </div>
             <button
@@ -145,7 +145,7 @@ export default function CartDrawer({
                   Sua cesta está vazia
                 </h3>
                 <p className="text-xs text-neutral-500 max-w-xs mb-6">
-                  Selecione uma de nossas criações artesanais celestes da Stelline para iniciar a sua personalização de afeto.
+                  Selecione uma de nossas criações artesanais para iniciar a sua personalização.
                 </p>
                 <button
                   onClick={onClose}
