@@ -11,6 +11,10 @@ import cestaKidsImg from "./assets/images/cesta_kids_(final).png";
 import cestaRomanticaImg from "./assets/images/cesta_romantica_(final).png";
 // @ts-ignore
 import cestaHappyHourImg from "./assets/images/cesta_happy_hour_(final).png";
+// @ts-ignore
+import cestaPresenteElaImg from "./assets/images/cesta_presente_ela_(final).png";
+// @ts-ignore
+import cestaPresenteEleImg from "./assets/images/cesta_presente_ele_(final).png";
 
 export const PRODUCTS: Product[] = [
   {
@@ -209,6 +213,46 @@ export const PRODUCTS: Product[] = [
           "Mix de amendoim crocante",
           "Trufas",
           "Embalagem: Caixa cartonada redonda, 25x10cm."
+        ]
+      }
+    ]
+  },
+  {
+    id: "cesta-presente-ela",
+    name: "Cesta Presente - Para Ela",
+    tagline: "Delicadeza, encanto e carinho em cada detalhe",
+    description: "Uma combinação clássica e irresistível feita para derreter o coração de quem você ama. Une o toque macio e acolhedor de uma pelúcia premium de 20cm ao sabor inconfundível da tradicional caixa de bombons Ferrero Rocher, delicadamente decorada com balões metalizados de coração.",
+    image: cestaPresenteElaImg,
+    sizes: [
+      {
+        label: "Tamanho Único",
+        shortLabel: "Tam. P",
+        price: 150.00,
+        description: "Opção perfeita para demonstrar carinho em qualquer celebração (serve 1 pessoa).",
+        items: [
+          "Brinquedo de pelúcia (urso de 20cm de altura ou capivara de 20cm de altura)",
+          "Caixa de bombom Ferrero Rocher (8 bombons)",
+          "Embalagem: Cesta de palha, forrada com papel de seda; balão metalizado vermelho, em formato  de coração, médio; balão metalizado vermelho, em formato de coração, pequeno; acompanha cartão de mensagem."
+        ]
+      }
+    ]
+  },
+  {
+    id: "cesta-presente-ele",
+    name: "Cesta Presente - Para Ele",
+    tagline: "O presente ideal para quem exige qualidade",
+    description: "A união impecável entre o estilo marcante do copo térmico Stanley preto e o requinte da caixa dourada de Ferrero Rocher. Uma opção minimalista, utilitária e de alto padrão, pronta para expressar sua admiração com muita personalidade.",
+    image: cestaPresenteEleImg,
+    sizes: [
+      {
+        label: "Tamanho Único",
+        shortLabel: "Tam. P",
+        price: 150.00,
+        description: "Uma opção elegante de presente memorável (serve 1 pessoa).",
+        items: [
+          "Copo térmico Stanley (350ml)",
+          "caixa de bombom Ferrero Rocher (8 bombons)",
+          "Embalagem: Caixa box, forrada com papel de seda; balão metalizado vermelho, em formato de  coração, médio; balão metalizado vermelho, em formato de coração, pequeno; acompanha cartão de mensagem."
         ]
       }
     ]
