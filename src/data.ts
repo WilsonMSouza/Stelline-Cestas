@@ -9,6 +9,8 @@ import cestaColonialImg from "./assets/images/cesta_colonial_(final).png";
 import cestaKidsImg from "./assets/images/cesta_kids_(final).png";
 // @ts-ignore
 import cestaRomanticaImg from "./assets/images/cesta_romantica_(final).png";
+// @ts-ignore
+import cestaHappyHourImg from "./assets/images/cesta_happy_hour_(final).png";
 
 export const PRODUCTS: Product[] = [
   {
@@ -186,26 +188,27 @@ export const PRODUCTS: Product[] = [
     ]
   },
   {
-    id: "cesta-despertar-saudavel",
-    name: "Cesta Despertar Saudável",
-    tagline: "Equilíbrio, leveza e vitalidade",
-    description: "Iogurte grego artesanal ultra cremoso, granola dourada assada no mel do dia, frutas frescas da estação fatiadas na hora, café orgânico de aroma indescritível e pães multigrãos fofinhos.",
-    image: "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&q=80&w=800",
-    badge: "Opção Saudável",
+    id: "cesta-happy-hour",
+    name: "Cesta Happy Hour",
+    tagline: "Sabores que convidam ao brinde",
+    description: "A combinação ideal para transformar qualquer comemoração em um momento memorável. Reúne uma seleção rigorosa de cervejas premium (Heineken, Stella Artois ou Artesanal) harmonizadas perfeitamente com salame colonial, mix de queijos selecionados (Minas e provolone), patê de ricota temperado, grissinis crocantes e um toque final de trufas artesanais irresistíveis.",
+    image: cestaHappyHourImg,
     sizes: [
       {
         label: "Tamanho M Único",
         shortLabel: "Tam. M",
-        price: 168.00,
-        description: "Uma sinfonia saudável e revigorante com ingredientes orgânicos selecionados com muito amor.",
+        price: 180.00,
+        description: "A harmonização ideal para o fim do dia (serve 2 pessoas).",
         items: [
-          "1 Pote de Iogurte Grego Artesanal (200g)",
-          "Granola Crocante Dourada caseira assada no mel",
-          "Mix de Frutas Frescas (Morangos, Mirtilos e Kiwi)",
-          "1 Sachê de Drip Coffee Orgânico especial",
-          "1 Garrafa de Kombucha de Frutas Vermelhas ou Hibisco (300ml)",
-          "Torradinhas multigrãos fatiadas fininhas",
-          "Pote de Mel Puro Silvestre para adoçar (40g)"
+          "Cerveja long neck (Heineken, Stella Artois, Artesanal)",
+          "Grissini",
+          "Mini pretties",
+          "Torradinha e pãozinho artesanal",
+          "Patê de ricota e salame colonial",
+          "Mix de queijos (minas e provolone)",
+          "Mix de amendoim crocante",
+          "Trufas",
+          "Embalagem: Caixa cartonada redonda, 25x10cm."
         ]
       }
     ]
