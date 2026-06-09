@@ -380,7 +380,7 @@ export default function App() {
               </h3>
               <div className="h-1 w-16 bg-amber-400 mx-auto mt-4 mb-3 rounded-full"></div>
               <p className="text-sm text-neutral-400 max-w-md mx-auto font-sans">
-                Tudo o que você precisa saber para garantir a melhor entrega e cuidado rústico aos detalhes.
+                Tudo o que você precisa saber para realizar o seu pedido e garantir a melhor entrega.
               </p>
             </div>
 
