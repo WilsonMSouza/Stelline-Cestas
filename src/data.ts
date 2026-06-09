@@ -14,8 +14,8 @@ export const PRODUCTS: Product[] = [
   {
     id: "cesta-amanhecer",
     name: "Cesta Amanhecer",
-    tagline: "Café da manhã com sofisticação",
-    description: "Mini bolo artesanal de laranja, croissant de amanteigado folhado, frios especiais fatiados, drip coffee especial gourmet e muito mais para começar o dia com muito afeto.",
+    tagline: "O ritual perfeito para despertar",
+    description: "Um menu fino e delicado para transformar a manhã em um grande acontecimento. Reúne minibolo artesanal de laranja, croissants folhados na manteiga, frios nobres fatiados, autêntico stroopwafel e drip coffee gourmet para um amanhecer inesquecível.",
     image: cestaAmanhecerImg,
     badge: "Mais Pedida",
     sizes: [
@@ -62,8 +62,8 @@ export const PRODUCTS: Product[] = [
   {
     id: "amanhecer-premium",
     name: "Amanhecer Premium",
-    tagline: "O sabor refinado que encanta",
-    description: "Nossa consagrada seleção de croissants amanteigados folhados, frios especiais fatiados, geleia artesanal, drip coffee especial gourmet e muito mais.",
+    tagline: "O ápice da excusividade matinal",
+    description: "Curadoria extraordinária voltada aos paladares mais exigentes. Combina a sofisticação dos bombons Ferrero Rocher com iogurte grego premium, granola com damascos, queijos especiais selecionados, pão de queijo com Catupiry, drip coffee e chás.",
     image: cestaAmanhecerPremiumImg,
     sizes: [
       { 
@@ -77,7 +77,8 @@ export const PRODUCTS: Product[] = [
           "Pão de queijo com catupiry, grissini, sfogliatini e torradinhas",
           "Frios especiais: queijo minas, queijo muçarela, salame italiano e lombo canadense",
           "Geleia artesanal, manteiga e mel",
-          "Granola, damasco, castanha, bombom Ferrero Rocher e frutas da época",
+          "Iogurte Grego, granola, damasco e castanha",
+          "Bombom Ferrero Rocher e frutas da época",
           "Suco de uva integral (500 ml)",
           "Drip coffee especial gourmet",
           "Sache de capuccino e sache de chá",
@@ -89,8 +90,8 @@ export const PRODUCTS: Product[] = [
   {
     id: "cesta-colonial",
     name: "Cesta Colonial",
-    tagline: "O aconchego rústico do campo",
-    description: "Bolo de laranja, broa de milho, pão artesanal, salame e queijo coloniais, geléia artesanal, drip coffee e muito mais.",
+    tagline: "A nobreza das tradições artesanais",
+    description: "Uma imersão gastronômica farta e afetiva que resgata o verdadeiro sabor do campo. Traz receitas artesanais autênticas como broa de milho ou cuca fresca, pães de fabricação própria, queijo e salame coloniais curados à perfeição, patê de ricota e geleia de frutas.",
     image: cestaColonialImg,
     sizes: [
       { 
@@ -134,8 +135,8 @@ export const PRODUCTS: Product[] = [
   {
     id: "cesta-romantica",
     name: "Cesta Romântica",
-    tagline: "Eternize histórias de amor",
-    description: "Pão de ló, croissant amanteigado, cupcake, Stropp waffle, bolachas artesanais, frios especiais, drip coffee e muito mais...",
+    tagline: "O romantismo em seu mais alto padrão",
+    description: "Apresentada em uma magnífica embalagem de MDF em formato de coração que impressiona à primeira vista. Reúne a leveza do bolo pão de ló com cupcakes decorados, trufas finas, frios selecionados e um brinde memorável com suco de uva gaseificado de altíssima qualidade.",
     image: cestaRomanticaImg,
     sizes: [
       { 
