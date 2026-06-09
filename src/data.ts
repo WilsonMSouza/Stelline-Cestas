@@ -67,7 +67,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "amanhecer-premium",
-    name: "Amanhecer Premium",
+    name: "Cesta Amanhecer Premium",
     tagline: "O ápice da excusividade matinal",
     description: "Curadoria extraordinária voltada aos paladares mais exigentes. Combina a sofisticação dos bombons Ferrero Rocher com iogurte grego premium, granola com damascos, queijos especiais selecionados, pão de queijo com Catupiry, drip coffee e chás.",
     image: cestaAmanhecerPremiumImg,
