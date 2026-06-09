@@ -303,9 +303,11 @@ export function generateWhatsAppMessage(
     text += `  └ Qtd: ${item.quantity}x | Preço: ${formatCurrency(item.selectedSize.price * item.quantity)}\n`;
   });
 
-  if (addons.length > 0) {
+  const activeAddons = addons.filter((item) => item.quantity > 0);
+
+  if (activeAddons.length > 0) {
     text += `\n✨ *ITENS ADICIONAIS SENSORIAIS:*\n`;
-    addons.forEach((addonItem) => {
+    activeAddons.forEach((addonItem) => {
       text += `➕ *${addonItem.addon.name}*\n`;
       text += `  └ Qtd: ${addonItem.quantity}x | Preço: ${formatCurrency(addonItem.addon.price * addonItem.quantity)}\n`;
     });
@@ -315,8 +317,7 @@ export function generateWhatsAppMessage(
     text += `\n💌 *MENSAGEM DO CARTÃO DE PRESENTE:*\n_"${orderDetails.giftCardMessage}"_\n`;
   }
 
-  text += `\n💰 *VALOR TOTAL DA ENCOMENDA:* *${formatCurrency(totalPrice)}*\n\n`;
-  text += `_Pedimos a gentileza de aguardar que iremos confirmar os dados e enviar a chave do Pix em instantes para aprovação definitiva! Obrigado por escolher a STELLINE!_ ✨`;
+  text += `\n💰 *VALOR TOTAL DA ENCOMENDA:* *${formatCurrency(totalPrice)}*`;
 
   const encodedText = encodeURIComponent(text);
   return `https://wa.me/${phone}?text=${encodedText}`;

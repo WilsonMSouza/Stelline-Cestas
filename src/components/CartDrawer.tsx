@@ -510,7 +510,7 @@ export default function CartDrawer({
                       />
                       <div className="flex-grow">
                         <span className="block text-[13px] font-bold text-neutral-200">
-                          Pix Instantâneo (Recomendado)
+                          Pix (Recomendado)
                         </span>
                         <span className="block text-[10px] text-neutral-500">
                           Reserva garantida imediatamente com 100% antecipado.
