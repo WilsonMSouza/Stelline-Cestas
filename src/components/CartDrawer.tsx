@@ -580,7 +580,7 @@ export default function CartDrawer({
                 </div>
                 {addonsTotal > 0 && (
                   <div className="flex justify-between text-xs text-neutral-500">
-                    <span>Sensoriais Adicionais:</span>
+                    <span>Itens Adicionais:</span>
                     <span>{formatCurrency(addonsTotal)}</span>
                   </div>
                 )}
