@@ -306,7 +306,7 @@ export function generateWhatsAppMessage(
   const activeAddons = addons.filter((item) => item.quantity > 0);
 
   if (activeAddons.length > 0) {
-    text += `\n✨ *ITENS ADICIONAIS SENSORIAIS:*\n`;
+    text += `\n✨ *ITENS ADICIONAIS:*\n`;
     activeAddons.forEach((addonItem) => {
       text += `➕ *${addonItem.addon.name}*\n`;
       text += `  └ Qtd: ${addonItem.quantity}x | Preço: ${formatCurrency(addonItem.addon.price * addonItem.quantity)}\n`;
