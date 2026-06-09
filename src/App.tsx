@@ -510,7 +510,7 @@ export default function App() {
                 <div className="space-y-1.5">
                   <span className="text-[10px] uppercase tracking-wider font-extrabold text-amber-500/80 block">Taxa de Entrega</span>
                   <p className="leading-relaxed text-neutral-400">
-                    A partir do endereço completado fornecido por você, calcularemos o valor exato da taxa de entrega e o informaremos de imediato.
+                    A partir do endereço completo fornecido por você, calcularemos o valor exato da taxa de entrega e o informaremos de imediato.
                   </p>
                 </div>
 
