@@ -270,13 +270,13 @@ export default function App() {
               <div className="space-y-4 max-w-xl text-[#d0c5af] font-sans font-light text-sm sm:text-base leading-relaxed">
                 <p className="font-semibold text-amber-300">Querido Cliente,</p>
                 <p>
-                  Na <strong className="text-amber-200 font-medium">STELLINE</strong>, acreditamos que os detalhes fazem toda a diferença. Preparamos cada cesta com qualidade e muito carinho para oferecer não apenas um presente, mas uma experiência gastronômica verdadeiramente inesquecível.
+                  Na <strong className="text-amber-200 font-medium">STELLINE</strong>, acreditamos que a verdadeira sofisticação mora nos detalhes. Preparamos cada cesta com atenção, qualidade e carinho para oferecer muito mais que um presente, mas uma experiência gastronômica sensorial verdadeiramente inesquecível para quem recebe.
                 </p>
                 <p>
-                  É uma alegria participar dos seus momentos mais especiais. Convidamos você a conhecer nosso cardápio e contar conosco para personalizar cada entrega, garantindo que ela combine perfeitamente com a ocasião.
+                  É uma imensa alegria fazer parte das celebrações mais importantes da sua vida. Convidamos você a explorar nosso cardápio e contar com o nosso toque pessoal para personalizar cada entrega, garantindo a surpresa perfeita para a ocasião.
                 </p>
                 <p className="font-medium text-amber-300/90">
-                  Agradecemos imensamente por confiar no nosso trabalho!
+                  Agradecemos de coração por confiar em nosso cuidado e dedicação!
                 </p>
                 <div className="pt-3 text-[11px] uppercase tracking-widest text-[#a89d88] border-t border-amber-900/10">
                   Com carinho,<br />
