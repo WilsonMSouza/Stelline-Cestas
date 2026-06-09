@@ -3,6 +3,23 @@ import { CartItem, AddonCartItem, OrderDetails } from "../types";
 import { formatCurrency, generateWhatsAppMessage } from "../data";
 import { X, Trash2, Calendar, MapPin, Clock, MessageSquare, CreditCard, ChevronRight, Gift } from "lucide-react";
 
+const formatPhone = (value: string): string => {
+  if (!value) return "";
+  const digits = value.replace(/\D/g, "");
+  const truncated = digits.slice(0, 11);
+  
+  if (truncated.length <= 2) {
+    return truncated.length > 0 ? `(${truncated}` : "";
+  }
+  if (truncated.length <= 6) {
+    return `(${truncated.slice(0, 2)}) ${truncated.slice(2)}`;
+  }
+  if (truncated.length <= 10) {
+    return `(${truncated.slice(0, 2)}) ${truncated.slice(2, 6)}-${truncated.slice(6)}`;
+  }
+  return `(${truncated.slice(0, 2)}) ${truncated.slice(2, 7)}-${truncated.slice(7)}`;
+};
+
 interface CartDrawerProps {
   isOpen: boolean;
   onClose: () => void;
@@ -57,7 +74,11 @@ export default function CartDrawer({
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    if (name === "contactPhone") {
+      setFormData((prev) => ({ ...prev, [name]: formatPhone(value) }));
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
   };
 
   const handleServiceTypeChange = (type: 'delivery' | 'pickup') => {

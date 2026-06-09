@@ -283,6 +283,11 @@ export function generateWhatsAppMessage(
   let text = `🌟 *NOVA ENCOMENDA - STELLINE CESTAS* 🌟\n\n`;
   text += `👤 *Nome do Cliente:* ${orderDetails.recipientName || 'Não informado'}\n`;
   text += `📞 *Telefone:* ${orderDetails.contactPhone || 'Não informado'}\n`;
+  
+  if (orderDetails.senderName) {
+    text += `🎁 *Para quem é o presente:* ${orderDetails.senderName}\n`;
+  }
+  
   text += `📦 *Forma de Retirada:* ${orderDetails.serviceType === 'delivery' ? '🚗 Entrega' : '🏪 Retirada'}\n`;
   
   if (orderDetails.serviceType === 'delivery') {
