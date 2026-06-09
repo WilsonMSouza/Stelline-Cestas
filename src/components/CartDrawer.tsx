@@ -325,14 +325,14 @@ export default function CartDrawer({
 
                   <div>
                     <label className="block text-[11px] font-semibold text-neutral-400 uppercase tracking-wider mb-1">
-                      De Quem é Presente? (Remetente)
+                      Para Quem é o Presente?
                     </label>
                     <input
                       type="text"
                       name="senderName"
                       value={formData.senderName}
                       onChange={handleInputChange}
-                      placeholder="Ex: Seu Nome ou 'Anônimo' (Opcional)"
+                      placeholder="Ex: Nome ou 'Anônimo' (Opcional)"
                       className="w-full bg-neutral-950/50 border border-neutral-900 rounded-lg px-3 py-2 text-sm text-neutral-200 placeholder-neutral-600 focus:outline-none focus:border-amber-500/50"
                     />
                   </div>
