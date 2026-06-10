@@ -114,7 +114,7 @@ export default function CartDrawer({
             <div className="flex items-center gap-3">
               <Gift className="w-5 h-5 text-amber-400" />
               <h2 className="font-serif text-xl sm:text-2xl text-neutral-100 tracking-tight">
-                Seu Pedido
+                Sua Sacola
               </h2>
             </div>
             <button
@@ -136,7 +136,7 @@ export default function CartDrawer({
                   : "text-neutral-500 border-transparent hover:text-neutral-300"
               }`}
             >
-              Itens do Presente ({cartItems.reduce((a, b) => a + b.quantity, 0) + activeAddons.reduce((a, b) => a + b.quantity, 0)})
+              Minhas Escolhas ({cartItems.reduce((a, b) => a + b.quantity, 0) + activeAddons.reduce((a, b) => a + b.quantity, 0)})
             </button>
             <button
               onClick={() => {
@@ -163,10 +163,10 @@ export default function CartDrawer({
                   <Gift className="w-8 h-8 text-neutral-600" />
                 </div>
                 <h3 className="font-serif text-lg text-neutral-300 font-medium mb-1">
-                  Sua cesta está vazia
+                  Sua sacola ainda está vazia
                 </h3>
                 <p className="text-xs text-neutral-500 max-w-xs mb-6">
-                  Selecione uma de nossas criações artesanais para iniciar a sua personalização.
+                  Nossas criações estão prontas para surpreender. Explore o catálogo e encontre o presente perfeito!
                 </p>
                 <button
                   onClick={onClose}
@@ -607,7 +607,7 @@ export default function CartDrawer({
                 )}
                 {formData.serviceType === "delivery" && (
                   <div className="flex justify-between text-xs text-amber-500/80 font-medium">
-                    <span>Taxa de Entrega (Cascavel):</span>
+                    <span>Taxa de Entrega (Cascavel-PR):</span>
                     <span>A combinar no WhatsApp</span>
                   </div>
                 )}
