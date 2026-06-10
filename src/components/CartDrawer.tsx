@@ -96,6 +96,7 @@ export default function CartDrawer({
   };
 
   const activeAddons = addonItems.filter((i) => i.quantity > 0);
+  const isCartEmpty = cartItems.length === 0 && activeAddons.length === 0;
 
   return (
     <div className="fixed inset-0 z-50 overflow-hidden font-sans">
@@ -140,11 +141,11 @@ export default function CartDrawer({
             </button>
             <button
               onClick={() => {
-                if (cartItems.length > 0) setActiveTab('checkout');
+                if (!isCartEmpty) setActiveTab('checkout');
               }}
-              disabled={cartItems.length === 0}
+              disabled={isCartEmpty}
               className={`py-3.5 text-center transition-colors ${
-                cartItems.length === 0 ? "opacity-40 cursor-not-allowed" : "cursor-pointer"
+                isCartEmpty ? "opacity-40 cursor-not-allowed" : "cursor-pointer"
               } border-b-2 ${
                 activeTab === 'checkout'
                   ? "text-amber-400 border-amber-400 font-bold bg-amber-500/5 text-[11px]"
@@ -157,7 +158,7 @@ export default function CartDrawer({
 
           {/* Core scrollable content form container */}
           <div className="flex-1 overflow-y-auto px-6 py-6 space-y-6">
-            {cartItems.length === 0 ? (
+            {isCartEmpty ? (
               <div className="h-full flex flex-col justify-center items-center text-center py-12 px-4">
                 <div className="w-16 h-16 rounded-full bg-neutral-900 flex items-center justify-center border border-neutral-800 mb-4 animate-pulse">
                   <Gift className="w-8 h-8 text-neutral-600" />
@@ -178,72 +179,74 @@ export default function CartDrawer({
             ) : activeTab === 'items' ? (
               <div className="space-y-6">
                 {/* Baskets list */}
-                <div>
-                  <h3 className="text-xs font-semibold text-neutral-500 uppercase tracking-widest mb-3">
-                    Cestas Selecionadas
-                  </h3>
-                  <div className="space-y-4">
-                    {cartItems.map((item) => (
-                      <div
-                        key={item.id}
-                        className="bg-neutral-950/40 border border-neutral-900/60 p-4 rounded-xl flex items-start gap-4 hover:border-amber-500/20 transition-all"
-                      >
-                        <img
-                          src={item.product.image}
-                          alt={item.product.name}
-                          className="w-16 h-16 rounded-lg object-cover border border-neutral-800"
-                        />
-                        <div className="flex-grow min-w-0">
-                          <h4 className="font-serif text-base text-neutral-200 mt-0.5 truncate">
-                            {item.product.name}
-                          </h4>
-                          <span className="inline-block text-[10px] uppercase font-bold tracking-wider text-amber-500/80 bg-amber-500/5 px-2 py-0.5 rounded border border-amber-500/10 mt-1">
-                            {item.selectedSize.label}
-                          </span>
-                          <p className="text-[11px] text-neutral-400 font-sans mt-1">
-                            Individual: {formatCurrency(item.selectedSize.price)}
-                          </p>
+                {cartItems.length > 0 && (
+                  <div>
+                    <h3 className="text-xs font-semibold text-neutral-500 uppercase tracking-widest mb-3">
+                      Cestas Selecionadas
+                    </h3>
+                    <div className="space-y-4">
+                      {cartItems.map((item) => (
+                        <div
+                          key={item.id}
+                          className="bg-neutral-950/40 border border-neutral-900/60 p-4 rounded-xl flex items-start gap-4 hover:border-amber-500/20 transition-all"
+                        >
+                          <img
+                            src={item.product.image}
+                            alt={item.product.name}
+                            className="w-16 h-16 rounded-lg object-cover border border-neutral-800"
+                          />
+                          <div className="flex-grow min-w-0">
+                            <h4 className="font-serif text-base text-neutral-200 mt-0.5 truncate">
+                              {item.product.name}
+                            </h4>
+                            <span className="inline-block text-[10px] uppercase font-bold tracking-wider text-amber-500/80 bg-amber-500/5 px-2 py-0.5 rounded border border-amber-500/10 mt-1">
+                              {item.selectedSize.label}
+                            </span>
+                            <p className="text-[11px] text-neutral-400 font-sans mt-1">
+                              Individual: {formatCurrency(item.selectedSize.price)}
+                            </p>
 
-                          {/* Control row */}
-                          <div className="flex justify-between items-center mt-3 pt-2.5 border-t border-neutral-900/60">
-                            <div className="flex items-center gap-2.5 bg-neutral-900/80 py-1 px-2.5 rounded-full border border-neutral-800">
+                            {/* Control row */}
+                            <div className="flex justify-between items-center mt-3 pt-2.5 border-t border-neutral-900/60">
+                              <div className="flex items-center gap-2.5 bg-neutral-900/80 py-1 px-2.5 rounded-full border border-neutral-800">
+                                <button
+                                  onClick={() =>
+                                    onUpdateCartItemQuantity(item.id, item.quantity - 1)
+                                  }
+                                  className="text-neutral-500 hover:text-white transition-colors cursor-pointer text-xs p-0.5"
+                                  type="button"
+                                >
+                                  -
+                                </button>
+                                <span className="font-sans font-bold text-xs text-neutral-200 text-center w-4">
+                                  {item.quantity}
+                                </span>
+                                <button
+                                  onClick={() =>
+                                    onUpdateCartItemQuantity(item.id, item.quantity + 1)
+                                  }
+                                  className="text-neutral-500 hover:text-white transition-colors cursor-pointer text-xs p-0.5"
+                                  type="button"
+                                >
+                                  +
+                                </button>
+                              </div>
+
                               <button
-                                onClick={() =>
-                                  onUpdateCartItemQuantity(item.id, item.quantity - 1)
-                                }
-                                className="text-neutral-500 hover:text-white transition-colors cursor-pointer text-xs p-0.5"
+                                onClick={() => onRemoveCartItem(item.id)}
+                                className="text-neutral-500 hover:text-red-400 p-1.5 rounded-full hover:bg-red-500/5 transition-colors cursor-pointer"
+                                title="Remover cesta"
                                 type="button"
                               >
-                                -
-                              </button>
-                              <span className="font-sans font-bold text-xs text-neutral-200 text-center w-4">
-                                {item.quantity}
-                              </span>
-                              <button
-                                onClick={() =>
-                                  onUpdateCartItemQuantity(item.id, item.quantity + 1)
-                                }
-                                className="text-neutral-500 hover:text-white transition-colors cursor-pointer text-xs p-0.5"
-                                type="button"
-                              >
-                                +
+                                <Trash2 className="w-4 h-4" />
                               </button>
                             </div>
-
-                            <button
-                              onClick={() => onRemoveCartItem(item.id)}
-                              className="text-neutral-500 hover:text-red-400 p-1.5 rounded-full hover:bg-red-500/5 transition-colors cursor-pointer"
-                              title="Remover cesta"
-                              type="button"
-                            >
-                              <Trash2 className="w-4 h-4" />
-                            </button>
                           </div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
 
                 {/* Selected Addons */}
                 {activeAddons.length > 0 && (
@@ -592,13 +595,15 @@ export default function CartDrawer({
           </div>
 
           {/* Checkout Footer Total calculation and primary triggers */}
-          {cartItems.length > 0 && (
+          {!isCartEmpty && (
             <div className="border-t border-neutral-900 bg-neutral-950/60 p-6 space-y-4">
               <div className="space-y-1.5 font-sans">
-                <div className="flex justify-between text-xs text-neutral-500">
-                  <span>Subtotal Cestas:</span>
-                  <span>{formatCurrency(basketsTotal)}</span>
-                </div>
+                {basketsTotal > 0 && (
+                  <div className="flex justify-between text-xs text-neutral-500">
+                    <span>Subtotal Cestas:</span>
+                    <span>{formatCurrency(basketsTotal)}</span>
+                  </div>
+                )}
                 {addonsTotal > 0 && (
                   <div className="flex justify-between text-xs text-neutral-500">
                     <span>Itens Adicionais:</span>
