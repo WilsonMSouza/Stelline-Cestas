@@ -68,7 +68,10 @@ export default function CartDrawer({
     (acc, addonItem) => acc + addonItem.addon.price * addonItem.quantity,
     0
   );
-  const totalPrice = basketsTotal + addonsTotal;
+  const subtotalPrice = basketsTotal + addonsTotal;
+  const hasPixDiscount = formData.paymentMethod === "pix";
+  const pixDiscountAmount = hasPixDiscount ? subtotalPrice * 0.05 : 0;
+  const finalTotalPrice = subtotalPrice - pixDiscountAmount;
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -91,7 +94,7 @@ export default function CartDrawer({
 
   const handleSubmitOrder = (e: React.FormEvent) => {
     e.preventDefault();
-    const url = generateWhatsAppMessage(cartItems, addonItems, formData, totalPrice);
+    const url = generateWhatsAppMessage(cartItems, addonItems, formData, subtotalPrice);
     window.open(url, "_blank");
   };
 
@@ -167,13 +170,13 @@ export default function CartDrawer({
                   Sua sacola ainda está vazia
                 </h3>
                 <p className="text-xs text-neutral-500 max-w-xs mb-6">
-                  Nossas criações estão prontas para surpreender. Explore o catálogo e encontre o presente perfeito!
+                  Nossas criações estão prontas para surpreender. Explore o cardápio e encontre o presente perfeito!
                 </p>
                 <button
                   onClick={onClose}
                   className="px-6 py-2.5 rounded-full bg-amber-400/10 border border-amber-500/40 text-amber-400 text-xs font-bold tracking-widest uppercase hover:bg-amber-400 hover:text-neutral-950 transition-all cursor-pointer"
                 >
-                  Ver Nosso Catálogo
+                  Ver Nosso Cardápio
                 </button>
               </div>
             ) : activeTab === 'items' ? (
@@ -610,16 +613,22 @@ export default function CartDrawer({
                     <span>{formatCurrency(addonsTotal)}</span>
                   </div>
                 )}
+                {hasPixDiscount && (
+                  <div className="flex justify-between text-xs text-green-500 font-medium animate-fade-in">
+                    <span>Desconto Pix (5%):</span>
+                    <span>-{formatCurrency(pixDiscountAmount)}</span>
+                  </div>
+                )}
                 {formData.serviceType === "delivery" && (
                   <div className="flex justify-between text-xs text-amber-500/80 font-medium">
-                    <span>Taxa de Entrega (Cascavel-PR):</span>
+                    <span>Taxa de Entrega:</span>
                     <span>A combinar no WhatsApp</span>
                   </div>
                 )}
                 <div className="flex justify-between text-base font-serif font-semibold text-neutral-100 pt-2 border-t border-neutral-900">
                   <span>Valor Estimado:</span>
                   <span className="text-amber-400 font-bold font-sans text-lg">
-                    {formatCurrency(totalPrice)}
+                    {formatCurrency(finalTotalPrice)}
                   </span>
                 </div>
               </div>

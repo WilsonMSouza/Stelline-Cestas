@@ -28,7 +28,7 @@ export const PRODUCTS: Product[] = [
       { 
         label: "Tamanho P", 
         shortLabel: "Tam. P", 
-        price: 152.00,
+        price: 159.00,
         description: "Ideal para servir 1 pessoa com requinte e doçura na medida certa.",
         items: [
           "Mini bolo artesanal de laranja",
@@ -332,7 +332,16 @@ export function generateWhatsAppMessage(
     text += `\n💌 *MENSAGEM DO CARTÃO DE PRESENTE:*\n_"${orderDetails.giftCardMessage}"_\n`;
   }
 
-  text += `\n💰 *VALOR DA ENCOMENDA:* *${formatCurrency(totalPrice)}*`;
+  const isPix = orderDetails.paymentMethod === 'pix';
+  if (isPix) {
+    const discount = totalPrice * 0.05;
+    const finalTotal = totalPrice - discount;
+    text += `\n💵 *Subtotal:* ${formatCurrency(totalPrice)}`;
+    text += `\n💸 *Desconto Pix (5%):* -${formatCurrency(discount)}`;
+    text += `\n💰 *VALOR DA ENCOMENDA:* *${formatCurrency(finalTotal)}*`;
+  } else {
+    text += `\n💰 *VALOR DA ENCOMENDA:* *${formatCurrency(totalPrice)}*`;
+  }
 
   const encodedText = encodeURIComponent(text);
   return `https://wa.me/${phone}?text=${encodedText}`;

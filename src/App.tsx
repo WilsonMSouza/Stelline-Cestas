@@ -160,27 +160,32 @@ export default function App() {
           {/* Logo brand linked to top of pages */}
           <a
             href="#"
-            className="flex items-center gap-3 group transition-transform duration-300 active:scale-95"
+            className="flex items-center gap-4 group transition-transform duration-300 active:scale-95"
             aria-label="Ir para o topo"
           >
             <img 
               alt="STELLINE Logo" 
-              className="h-11 w-11 rounded-full object-cover border-2 border-amber-500/35 group-hover:border-amber-400 transition-colors duration-300"
+              className="h-14 w-14 rounded-full object-cover border-2 border-amber-500/35 group-hover:border-amber-400 transition-colors duration-300"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuB04BcMtUj55BdUoOJTV6Pch6QmbDbnLpvFSw-GZsmbG0jJQJCCcLSZpQCWtp41nq5PBAitomWhWAyXmKbbTr7khHwuaCt4_hI6bUjMr07jGlD2EExzdztoJgEnKsWqHJsJeTY61bkZ6sKI34O8Wok_JiiSIyAaZqdINuzav468KZRWAlD1A8n4pRAp297go6hlogAnr0XRgzhGLGn5shNAf7_fxgOK3zVdkppJ2hV5NZRTqrMxs_aEEPVjc0iOeqTDHZRmLy_NpsA"
               referrerPolicy="no-referrer"
             />
-            <span className="font-serif text-3xl font-bold text-amber-400 tracking-tighter leading-none transition-colors duration-300 group-hover:text-amber-300 select-none">
-              STELLINE
-            </span>
+            <div className="flex flex-col items-center">
+              <span className="font-serif text-2xl md:text-3xl font-bold text-amber-400 tracking-tighter leading-none transition-colors duration-300 group-hover:text-amber-300 select-none">
+                STELLINE
+              </span>
+              <span className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] font-medium text-neutral-400 mt-1 leading-none transition-colors duration-300 group-hover:text-amber-300/80">
+                Cestas de Café
+              </span>
+            </div>
           </a>
 
           {/* Desktop links */}
           <nav className="hidden md:flex items-center gap-10">
             <a 
-              href="#catalogo" 
+              href="#cardapio" 
               className="text-amber-400 border-b-2 border-amber-400 pb-1.5 pt-1 text-[11px] font-bold uppercase tracking-widest transition-opacity"
             >
-              Catálogo
+              Cardápio
             </a>
             <a 
               href="#adicionais" 
@@ -235,7 +240,7 @@ export default function App() {
           <div className="absolute inset-0 z-0 overflow-hidden">
             <img 
               alt="Luxury breakfast basket background with beautiful details" 
-              className="w-full h-full object-cover opacity-25 scale-105 select-none"
+              className="w-full h-full object-cover opacity-45 scale-105 select-none"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuc55wCTvXLc70eV-1mJoSvn7VO1riIiWzH1qrdRYzCkk_CNaru_WqdlRBpIgRZcZ9YgHVeClWl3H7Em7F_nNjX-jVe_AYFNwNvBhrbq3xT0mkWF2E4xlTf2EwDQl-xH1f-B1cU04RTZkStMMy3XfSXtBkOofEjwmId_r8X_xbgi5ERcoHre2oPnj0sJkG2zfJ28jUAcM5kPVfFSapFW_3VbMV8hXeRskLw6r95XmXYNTkB2f30vaujJQvHQE3yJn6r71Yrn53ekE"
               referrerPolicy="no-referrer"
             />
@@ -267,12 +272,12 @@ export default function App() {
               </h1>
 
               {/* Elegant description text */}
-              <div className="space-y-4 max-w-xl text-[#d0c5af] font-sans font-light text-sm sm:text-base leading-relaxed">
+              <div className="space-y-4 max-w-xl text-[#d0c5af] font-sans font-light text-base sm:text-lg leading-relaxed">
                 <p className="font-semibold text-amber-300">Querido Cliente,</p>
-                <p>
+                <p className="text-justify">
                   Na <strong className="text-amber-200 font-medium">STELLINE</strong>, acreditamos que a verdadeira sofisticação mora nos detalhes. Preparamos cada cesta com atenção, qualidade e carinho para oferecer muito mais que um presente, mas uma experiência gastronômica sensorial verdadeiramente inesquecível para quem recebe.
                 </p>
-                <p>
+                <p className="text-justify">
                   É uma imensa alegria fazer parte das celebrações mais importantes da sua vida. Convidamos você a explorar nosso cardápio e contar com o nosso toque pessoal para personalizar cada entrega, garantindo a surpresa perfeita para a ocasião.
                 </p>
                 <p className="font-medium text-amber-300/90">
@@ -310,14 +315,14 @@ export default function App() {
         </section>
 
         {/* Bento Grid Product Catalog */}
-        <section className="py-24 px-6 md:px-12" id="catalogo">
+        <section className="py-24 px-6 md:px-12" id="cardapio">
           <div className="max-w-7xl mx-auto">
             
             {/* Header titles */}
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
               <div>
                 <h3 className="font-serif text-4xl sm:text-5xl font-bold text-neutral-100 tracking-tight">
-                  Nosso <span className="text-amber-400 italic font-medium">Catálogo</span>
+                  Nosso <span className="text-amber-400 italic font-medium">Cardápio</span>
                 </h3>
                 <div className="h-1 w-20 bg-amber-400 mt-4 mb-3 rounded-full"></div>
                 <p className="text-sm text-neutral-400 max-w-md font-sans">
@@ -488,35 +493,35 @@ export default function App() {
                 
                 <div className="space-y-1.5">
                   <span className="text-[10px] uppercase tracking-wider font-extrabold text-amber-500/80 block">Produtos &amp; Imagens</span>
-                  <p className="leading-relaxed text-neutral-400">
+                  <p className="leading-relaxed text-neutral-400 text-justify">
                     As fotos são ilustrativas. Os produtos podem sofrer alterações de marcas e tamanhos ou ser substituídos por produtos afins, sem que informemos previamente.
                   </p>
                 </div>
 
                 <div className="space-y-1.5">
                   <span className="text-[10px] uppercase tracking-wider font-extrabold text-amber-500/80 block">Itens Adicionais</span>
-                  <p className="leading-relaxed text-neutral-400">
+                  <p className="leading-relaxed text-neutral-400 text-justify">
                     Os produtos adquiridos por você em “ADICIONAIS” acarretarão acréscimo no valor final da sua cesta.
                   </p>
                 </div>
 
                 <div className="space-y-1.5">
                   <span className="text-[10px] uppercase tracking-wider font-extrabold text-amber-500/80 block">Logística &amp; Segurança</span>
-                  <p className="leading-relaxed text-neutral-400">
+                  <p className="leading-relaxed text-neutral-400 text-justify">
                     Nossas entregas serão feitas de carro para garantir que seu produto chegue até você com total segurança e qualidade ideal.
                   </p>
                 </div>
 
                 <div className="space-y-1.5">
                   <span className="text-[10px] uppercase tracking-wider font-extrabold text-amber-500/80 block">Taxa de Entrega</span>
-                  <p className="leading-relaxed text-neutral-400">
+                  <p className="leading-relaxed text-neutral-400 text-justify">
                     A partir do endereço completo fornecido por você, calcularemos o valor exato da taxa de entrega e o informaremos de imediato.
                   </p>
                 </div>
 
                 <div className="space-y-1.5 md:col-span-2">
                   <span className="text-[10px] uppercase tracking-wider font-extrabold text-amber-500/80 block">Responsabilidade no Recebimento</span>
-                  <p className="leading-relaxed text-neutral-400">
+                  <p className="leading-relaxed text-neutral-400 text-justify">
                     Será de sua responsabilidade designar alguém para receber a cesta no dia, hora e local combinados. Caso não tenha ninguém para recebê-la e o entregador não consiga efetuar a entrega, a encomenda retornará ao nosso atelier e será cobrada uma nova taxa para redespacho.
                   </p>
                 </div>
@@ -558,14 +563,14 @@ export default function App() {
                   STELLINE
                 </span>
               </div>
-              <p className="text-xs text-neutral-500 leading-relaxed font-sans max-w-sm">
+              <p className="text-xs text-neutral-500 leading-relaxed font-sans max-w-sm text-justify">
                 A combinação perfeita entre afeto e sofisticação. Cestas exclusivas, criadas sob medida para eternizar as suas melhores memórias.
               </p>
             </div>
 
             {/* Quick footer navigation anchors */}
             <div className="flex flex-wrap gap-8 text-[11px] font-bold uppercase tracking-widest text-neutral-400">
-              <a href="#catalogo" className="hover:text-amber-400 transition-colors">Catálogo</a>
+              <a href="#cardapio" className="hover:text-amber-400 transition-colors">Cardápio</a>
               <a href="#adicionais" className="hover:text-amber-400 transition-colors">Adicionais</a>
               <a href="#funcionamento" className="hover:text-amber-400 transition-colors">Como Funciona</a>
               <a href="tel:45988197223" className="hover:text-amber-400 transition-colors">Contato</a>

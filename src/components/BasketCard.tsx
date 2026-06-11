@@ -121,7 +121,7 @@ export default function BasketCard({ product, onAddToCart }: BasketCardProps) {
             {product.name}
           </h4>
           <div className="h-[2px] w-12 bg-amber-500/50 mb-4 rounded-full"></div>
-          <p className="text-sm leading-relaxed text-neutral-400 font-sans mb-6">
+          <p className="text-sm leading-relaxed text-neutral-400 font-sans mb-6 text-justify">
             {product.description}
           </p>
         </div>
@@ -199,6 +199,12 @@ export default function BasketCard({ product, onAddToCart }: BasketCardProps) {
               </button>
             </div>
           )}
+
+          {/* Pix discount information */}
+          <div className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-green-500/5 border border-green-500/10 text-green-400 font-sans text-[11px] font-medium leading-tight justify-center">
+            <span>💸</span>
+            <span>Pagamento por <strong>Pix tem 5% de desconto:</strong> <strong className="text-green-300 font-bold font-sans">{formatCurrency(selectedSize.price * 0.95)}</strong></span>
+          </div>
 
           {/* Quick Reserve or Add to Cart CTA */}
           <div className="flex gap-2">
