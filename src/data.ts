@@ -34,7 +34,7 @@ export const PRODUCTS: Product[] = [
           "Mini bolo artesanal de laranja",
           "Croissant amanteigado",
           "Pão de queijo, bolacha artesanal, torradinhas e stroopwafel",
-          "Frios especiais fatiados: queijo minas, queijo muçarela, salame italiano e lombo canadense",
+          "Frios especiais fatiados: queijo minas padrão, queijo muçarela, salame italiano e lombo canadense",
           "Geleia artesanal e manteiga",
           "Bombom artesanal e frutas da época",
           "Suco de uva integral (250 a 300 ml)",
@@ -47,13 +47,13 @@ export const PRODUCTS: Product[] = [
       { 
         label: "Tamanho M", 
         shortLabel: "Tam. M", 
-        price: 227.00,
+        price: 227.85,
         description: "Perfeito para compartilhar (serve 2 pessoas).",
         items: [
           "Mini bolo artesanal de laranja",
           "Croissant amanteigado",
           "Pão de queijo, bolacha artesanal, torradinhas e stroopwafel",
-          "Frios especiais: queijo minas, queijo muçarela, salame italiano e lombo canadense",
+          "Frios especiais: queijo minas padrão, queijo muçarela, salame italiano e lombo canadense",
           "Geleia artesanal e manteiga",
           "Bombom artesanal e frutas da época",
           "Suco de uva integral (250 a 300 ml)",
@@ -75,13 +75,13 @@ export const PRODUCTS: Product[] = [
       { 
         label: "Tamanho M Único", 
         shortLabel: "Tam. M", 
-        price: 285.50,
+        price: 299.00,
         description: "Nossa seleção mais luxuosa com itens premium (serve 2 a 3 pessoas).",
         items: [
           "Bolo artesanal de laranja",
           "Croissant amanteigado",
           "Pão de queijo com catupiry, grissini, sfogliatini e torradinhas",
-          "Frios especiais: queijo minas, queijo muçarela, salame italiano e lombo canadense",
+          "Frios especiais: queijo minas padrão, queijo brie ou gouda, salame italiano e lombo canadense",
           "Geleia artesanal, manteiga e mel",
           "Iogurte Grego, granola, damasco e castanha",
           "Bombom Ferrero Rocher e frutas da época",
@@ -103,7 +103,7 @@ export const PRODUCTS: Product[] = [
       { 
         label: "Tamanho M", 
         shortLabel: "Tam. M", 
-        price: 225.00,
+        price: 247.00,
         description: "Sabores rústicos coloniais que resgatam o melhor da fazenda (serve 2 pessoas).",
         items: [
           "Bolo de laranja ou cenoura",
@@ -121,7 +121,7 @@ export const PRODUCTS: Product[] = [
       { 
         label: "Tamanho G", 
         shortLabel: "Tam. G", 
-        price: 260.00,
+        price: 289.00,
         description: "Versão farta com os sabores da fazenda (serve 3 a 4 pessoas).",
         items: [
           "Bolo de laranja ou cenoura",
@@ -146,15 +146,15 @@ export const PRODUCTS: Product[] = [
     image: cestaRomanticaImg,
     sizes: [
       { 
-        label: "Tamanho Único", 
-        shortLabel: "R$ 240,00", 
+        label: "Tamanho M Único", 
+        shortLabel: "Tam. M", 
         price: 240.00,
         description: "Uma inesquecível celebração da paixão e do afeto (serve 2 pessoas).",
         items: [
           "Pão de ló e croissant amanteigado",
           "Cupcake e Stropp Waffle",
           "Bolachas artesanais, pão de queijo, e torradinhas",
-          "Frios especiais: queijo minas, queijo muçarela, salame italiano e lombo canadense",
+          "Frios especiais: queijo minas padrão, queijo muçarela, salame italiano e lombo canadense",
           "Geléia artesanal e manteiga",
           "Frutas da época e trufas",
           "Suco de uva (long neck) gaseificado",
@@ -175,13 +175,13 @@ export const PRODUCTS: Product[] = [
       {
         label: "Tamanho P",
         shortLabel: "Tam. P",
-        price: 189.00,
+        price: 187.00,
         description: "Pequenos momentos, grandes sorrisos (serve 1 pessoa).",
         items: [
           "Croissant amanteigado e Pão de queijo",
-          "Donuts ou cookie, coopcake, stroopwafel",
+          "Coopcake, stroopwafel",
           "Queijo muçarela com recorte decorativo",
-          "Salame italiano e lombo canadense",
+          "Lombo canadense",
           "Frutas da época, creme de avelã e iogurte grego",
           "Suco de uva integral (250 a 300 ml) ou achocolatado",
           "Doces decorativos",
@@ -201,15 +201,15 @@ export const PRODUCTS: Product[] = [
       {
         label: "Tamanho M Único",
         shortLabel: "Tam. M",
-        price: 180.00,
+        price: 208.00,
         description: "A harmonização ideal para o fim do dia (serve 2 pessoas).",
         items: [
-          "Cerveja long neck (Heineken, Stella Artois, Artesanal)",
+          "Cerveja long neck (2 unidades de Heineken ou Stella Artois)",
           "Grissini",
           "Mini pretties",
           "Torradinha e pãozinho artesanal",
-          "Patê de ricota e salame colonial",
-          "Mix de queijos (minas e provolone)",
+          "Patê de ricota, salame italiano e lombo canadense",
+          "Mix de queijos (minas padrão e provolone)",
           "Mix de amendoim crocante",
           "Trufas",
           "Embalagem: Caixa cartonada redonda, 25x10cm."
@@ -227,7 +227,7 @@ export const PRODUCTS: Product[] = [
       {
         label: "Tamanho Único",
         shortLabel: "Tam. P",
-        price: 150.00,
+        price: 157.50,
         description: "Opção perfeita para demonstrar carinho em qualquer celebração (serve 1 pessoa).",
         items: [
           "Brinquedo de pelúcia (urso de 20cm de altura ou capivara de 20cm de altura)",
@@ -247,7 +247,7 @@ export const PRODUCTS: Product[] = [
       {
         label: "Tamanho Único",
         shortLabel: "Tam. P",
-        price: 150.00,
+        price: 157.50,
         description: "Uma opção elegante de presente memorável (serve 1 pessoa).",
         items: [
           "Copo térmico Stanley (350ml)",
