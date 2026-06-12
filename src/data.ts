@@ -48,7 +48,7 @@ export const PRODUCTS: Product[] = [
         label: "Tamanho M", 
         shortLabel: "Tam. M", 
         price: 227.85,
-        description: "Perfeito para compartilhar (serve 2 pessoas).",
+        description: "Perfeito para compartilhar (serve 2 a 3 pessoas).",
         items: [
           "Mini bolo artesanal de laranja",
           "Croissant amanteigado",
@@ -69,7 +69,7 @@ export const PRODUCTS: Product[] = [
     id: "amanhecer-premium",
     name: "Cesta Amanhecer Premium",
     tagline: "O ápice da excusividade matinal",
-    description: "Curadoria extraordinária voltada aos paladares mais exigentes. Combina a sofisticação dos bombons Ferrero Rocher com iogurte grego premium, granola com damascos, queijos especiais selecionados, pão de queijo com Catupiry, drip coffee e chás.",
+    description: "Curadoria extraordinária voltada aos paladares mais exigentes. Combina a sofisticação dos bombons Ferrero Rocher com iogurte grego premium, granola com damascos, queijos especiais selecionados, pão de queijo com catupiry, drip coffee e chás.",
     image: cestaAmanhecerPremiumImg,
     sizes: [
       { 
@@ -83,7 +83,7 @@ export const PRODUCTS: Product[] = [
           "Pão de queijo com catupiry, grissini, sfogliatini e torradinhas",
           "Frios especiais: queijo minas padrão, queijo brie ou gouda, salame italiano e lombo canadense",
           "Geleia artesanal, manteiga e mel",
-          "Iogurte Grego, granola, damasco e castanha",
+          "Iogurte grego, granola, damasco e castanha",
           "Bombom Ferrero Rocher e frutas da época",
           "Suco de uva integral (500 ml)",
           "Drip coffee especial gourmet",
@@ -104,17 +104,17 @@ export const PRODUCTS: Product[] = [
         label: "Tamanho M", 
         shortLabel: "Tam. M", 
         price: 247.00,
-        description: "Sabores rústicos coloniais que resgatam o melhor da fazenda (serve 2 pessoas).",
+        description: "Sabores rústicos coloniais que resgatam o melhor da fazenda (serve 2 a 3 pessoas).",
         items: [
           "Bolo de laranja ou cenoura",
           "Broa de milho ou cuca",
-          "Bolacha artesanal, Pão artesanal e Pão de queijo",
+          "Bolacha artesanal, pão artesanal e pão de queijo",
           "Salame e queijo coloniais",
           "Geléia artesanal, patê de ricota, manteiga e mel",
           "Frutas da época e bombom artesanal",
           "Suco de uva integral (500 ml)",
           "Drip coffee (café para coar)",
-          "Sache de Capuccino e Sache de Chá",
+          "Sache de capuccino e sache de chá",
           "Embalagem: Cesta de vime, redonda, 25x7cm, finalizada com fita de juta natural; acompanha cartão de mensagem e guardanapos."
         ]
       },
@@ -126,13 +126,13 @@ export const PRODUCTS: Product[] = [
         items: [
           "Bolo de laranja ou cenoura",
           "Broa de milho ou cuca",
-          "Bolacha artesanal, Pão artesanal e Pão de queijo",
+          "Bolacha artesanal, pão artesanal e pão de queijo",
           "Salame e queijo coloniais",
           "Geléia artesanal, patê de ricota, manteiga e mel",
           "Frutas da época e bombom artesanal",
           "Suco de uva integral (500 ml)",
           "Drip coffee (café para coar)",
-          "Sache de Capuccino e Sache de Chá",
+          "Sache de capuccino e sache de chá",
           "Embalagem: Cesta de vime,  redonda, 30x7cm, finalizada com fita de juta natural; acompanha cartão de mensagem."
         ]
       }
@@ -152,14 +152,14 @@ export const PRODUCTS: Product[] = [
         description: "Uma inesquecível celebração da paixão e do afeto (serve 2 pessoas).",
         items: [
           "Pão de ló e croissant amanteigado",
-          "Cupcake e Stropp Waffle",
+          "Cupcake e stroppwafel",
           "Bolachas artesanais, pão de queijo, e torradinhas",
           "Frios especiais: queijo minas padrão, queijo muçarela, salame italiano e lombo canadense",
           "Geléia artesanal e manteiga",
           "Frutas da época e trufas",
           "Suco de uva (long neck) gaseificado",
           "Drip coffee (café para coar)",
-          "Sache de Capuccino e Sache de Chá",
+          "Sache de capuccino e Sache de chá",
           "Embalagem: caixa de MDF, em formato de coração (30x7cm), embalada em celofane e finalizada com laço de cetim; acompanha cartão de mensagem."
         ]
       }
@@ -178,12 +178,12 @@ export const PRODUCTS: Product[] = [
         price: 187.00,
         description: "Pequenos momentos, grandes sorrisos (serve 1 pessoa).",
         items: [
-          "Croissant amanteigado e Pão de queijo",
+          "Croissant amanteigado e pão de queijo",
           "Coopcake, stroopwafel",
           "Queijo muçarela com recorte decorativo",
           "Lombo canadense",
           "Frutas da época, creme de avelã e iogurte grego",
-          "Suco de uva integral (250 a 300 ml) ou achocolatado",
+          "Suco de uva integral (250 a 300 ml) e achocolatado",
           "Doces decorativos",
           "Opção de Embalagem 1: Caixa de MDF 20x20cm, embalada em celofane e finalizada com laço de cetim; acompanha cartão de mensagem.",
           "Opção de Embalagem 2: Sacola fosca de alça redonda, 27x23cm, finalizada com laço de cetim; acompanha cartão de mensagem."
@@ -212,7 +212,7 @@ export const PRODUCTS: Product[] = [
           "Mix de queijos (minas padrão e provolone)",
           "Mix de amendoim crocante",
           "Trufas",
-          "Embalagem: Caixa cartonada redonda, 25x10cm."
+          "Embalagem: Caixa cartonada redonda, 25x10cm, com laço de cetim"
         ]
       }
     ]
