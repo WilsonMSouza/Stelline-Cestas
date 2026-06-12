@@ -1,14 +1,14 @@
 import { Product, AddonItem } from "./types";
 // @ts-ignore
-import cestaAmanhecerImg from "./assets/images/cesta_amanhecer_(final).png";
+import cestaAmanhecerImg from "./assets/images/cesta_amanhecer_(final-2).png";
 // @ts-ignore
-import cestaAmanhecerPremiumImg from "./assets/images/cesta_amanhecer_premium_(final).png";
+import cestaAmanhecerPremiumImg from "./assets/images/cesta_amanhecer_premium_(final-2).png";
 // @ts-ignore
 import cestaColonialImg from "./assets/images/cesta_colonial_(final).png";
 // @ts-ignore
 import cestaKidsImg from "./assets/images/cesta_kids_(final).png";
 // @ts-ignore
-import cestaRomanticaImg from "./assets/images/cesta_romantica_(final).png";
+import cestaRomanticaImg from "./assets/images/cesta_romantica_(final-2).png";
 // @ts-ignore
 import cestaHappyHourImg from "./assets/images/cesta_happy_hour_(final).png";
 // @ts-ignore
