@@ -4,13 +4,13 @@ import cestaAmanhecerImg from "./assets/images/cesta_amanhecer_(final-2).png";
 // @ts-ignore
 import cestaAmanhecerPremiumImg from "./assets/images/cesta_amanhecer_premium_(final-2).png";
 // @ts-ignore
-import cestaColonialImg from "./assets/images/cesta_colonial_(final).png";
+import cestaColonialImg from "./assets/images/cesta_colonial_(final-2).png";
 // @ts-ignore
 import cestaKidsImg from "./assets/images/cesta_kids_(final).png";
 // @ts-ignore
 import cestaRomanticaImg from "./assets/images/cesta_romantica_(final-2).png";
 // @ts-ignore
-import cestaHappyHourImg from "./assets/images/cesta_happy_hour_(final).png";
+import cestaHappyHourImg from "./assets/images/cesta_happy_hour_(final-2).png";
 // @ts-ignore
 import cestaPresenteElaImg from "./assets/images/cesta_presente_ela_(final).png";
 // @ts-ignore
