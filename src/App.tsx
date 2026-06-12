@@ -552,16 +552,21 @@ export default function App() {
             
             {/* Branding details */}
             <div className="space-y-4">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-4 group">
                 <img 
-                  alt="STELLINE Cestas Logo Footer" 
-                  className="h-10 w-10 rounded-full object-cover border border-amber-500/30"
+                  alt="STELLINE Logo Footer" 
+                  className="h-14 w-14 rounded-full object-cover border-2 border-amber-500/35 transition-colors duration-300"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuB04BcMtUj55BdUoOJTV6Pch6QmbDbnLpvFSw-GZsmbG0jJQJCCcLSZpQCWtp41nq5PBAitomWhWAyXmKbbTr7khHwuaCt4_hI6bUjMr07jGlD2EExzdztoJgEnKsWqHJsJeTY61bkZ6sKI34O8Wok_JiiSIyAaZqdINuzav468KZRWAlD1A8n4pRAp297go6hlogAnr0XRgzhGLGn5shNAf7_fxgOK3zVdkppJ2hV5NZRTqrMxs_aEEPVjc0iOeqTDHZRmLy_NpsA"
                   referrerPolicy="no-referrer"
                 />
-                <span className="font-serif text-2xl font-bold tracking-tight text-amber-400">
-                  STELLINE
-                </span>
+                <div className="flex flex-col items-center">
+                  <span className="font-serif text-2xl md:text-3xl font-bold text-amber-400 tracking-tighter leading-none select-none">
+                    STELLINE
+                  </span>
+                  <span className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] font-medium text-neutral-400 mt-1 leading-none select-none">
+                    Cestas de Café
+                  </span>
+                </div>
               </div>
               <p className="text-xs text-neutral-500 leading-relaxed font-sans max-w-sm text-justify">
                 A combinação perfeita entre afeto e sofisticação. Cestas exclusivas, criadas sob medida para eternizar as suas melhores memórias.
