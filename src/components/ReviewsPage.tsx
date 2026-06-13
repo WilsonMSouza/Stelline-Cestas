@@ -87,7 +87,7 @@ const INITIAL_REVIEWS: LocalReview[] = [
     rating: 5,
     date: "15 de Maio, 2026",
     basket: "Cesta Presente para Ela",
-    comment: "Fiz o pedido em cima da hora de antecedência e me atenderam com um carinho enorme e muita agilidade. A Cesta Presente para Ela é super delicada, sofisticada e charmosa. Parabéns pela excelência e o extremo capricho de toda equipe.",
+    comment: "Fiz o pedido em cima da hora e me atenderam com um carinho enorme e muita agilidade. A Cesta Presente para Ela é super delicada, sofisticada e charmosa. Parabéns pela excelência e o extremo capricho de toda equipe.",
     likes: 5
   },
   {
@@ -247,14 +247,14 @@ export default function ReviewsPage({ onBackToHome, onScrollToElement }: Reviews
       {/* Main Hero Header of Reviews Page */}
       <div className="text-center max-w-2xl mx-auto mb-16">
         <span className="text-[10px] md:text-[11px] uppercase tracking-[0.3em] font-bold text-amber-500 block mb-3">
-          Experiência Sensorial &amp; Afeto
+          Surpresas que emocionam
         </span>
         <h2 className="font-serif text-4xl sm:text-5xl font-bold text-neutral-100 tracking-tight leading-tight">
           O que dizem os nossos <span className="text-amber-400 italic font-medium">Queridos Clientes</span>
         </h2>
         <div className="h-1 w-20 bg-amber-400 mx-auto mt-6 mb-4 rounded-full"></div>
         <p className="text-sm sm:text-base text-neutral-400 font-sans leading-relaxed max-w-xl mx-auto text-justify sm:text-center">
-          Cada cesta da Stelline é preparada sob encomenda com rigor de qualidade para criar relatos inesquecíveis. Veja opiniões reais e compartilhe também a sua vivência gastronômica.
+          Cada criação da Stelline é preparada sob medida para eternizar momentos e despertar sorrisos inesquecíveis. Confira o depoimento sincero de quem já viveu essa experiência gastronômica e surpreendeu quem ama.
         </p>
       </div>
 
@@ -290,7 +290,7 @@ export default function ReviewsPage({ onBackToHome, onScrollToElement }: Reviews
 
           <div className="mt-5 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-green-500/5 border border-green-500/10 text-[10px] font-bold text-green-400 uppercase tracking-wider font-mono">
             <ShieldCheck className="w-3.5 h-3.5 text-green-400" />
-            <span>100% dos Clientes Recomendam</span>
+            <span>Aprovado por 100% dos clientes</span>
           </div>
         </div>
 
@@ -298,7 +298,7 @@ export default function ReviewsPage({ onBackToHome, onScrollToElement }: Reviews
         <div className="bg-neutral-950/40 p-8 rounded-2xl border border-neutral-900 shadow-2xl flex flex-col justify-center hover:border-amber-400/20 transition-all duration-300">
           <h4 className="font-serif text-lg font-bold text-neutral-200 mb-5 pb-2 border-b border-neutral-900 flex items-center gap-2">
             <MessageSquare className="w-4 h-4 text-amber-500" />
-            Distribuição de Estrelas
+            Histórico de satisfação
           </h4>
           
           <div className="space-y-3.5">
@@ -337,7 +337,7 @@ export default function ReviewsPage({ onBackToHome, onScrollToElement }: Reviews
           </div>
           
           <div className="mt-4 text-[10px] text-center text-neutral-500 font-sans italic">
-            *Clique em uma linha acima para filtrar os depoimentos por nota
+            *Selecione uma linha acima para filtrar as avaliações.
           </div>
         </div>
 
@@ -345,7 +345,7 @@ export default function ReviewsPage({ onBackToHome, onScrollToElement }: Reviews
         <div className="bg-neutral-950/40 p-8 rounded-2xl border border-neutral-900 shadow-2xl flex flex-col justify-center hover:border-amber-400/20 transition-all duration-300">
           <h4 className="font-serif text-lg font-bold text-neutral-200 mb-5 pb-2 border-b border-neutral-900 flex items-center gap-2">
             <Sparkles className="w-4 h-4 text-amber-500" />
-            Pilares da Stelline Experience
+            Nosso compromisso com você
           </h4>
 
           <div className="grid grid-cols-2 gap-4">
@@ -362,12 +362,12 @@ export default function ReviewsPage({ onBackToHome, onScrollToElement }: Reviews
             <div className="bg-neutral-900/30 p-4.5 rounded-xl border border-neutral-900/80 flex flex-col items-center justify-center text-center">
               <span className="text-2xl mb-1">🫐</span>
               <p className="text-[10px] uppercase font-bold tracking-wider text-neutral-400 font-mono mb-1">Sabor &amp; Frescor</p>
-              <span className="font-sans text-sm font-black text-amber-400">99.4% Premium</span>
+              <span className="font-sans text-sm font-black text-amber-400">99.4% Irresistível</span>
             </div>
 
             <div className="bg-neutral-900/30 p-4.5 rounded-xl border border-neutral-900/80 flex flex-col items-center justify-center text-center">
               <span className="text-2xl mb-1">🚗</span>
-              <p className="text-[10px] uppercase font-bold tracking-wider text-neutral-400 font-mono mb-1">Segurança de carro</p>
+              <p className="text-[10px] uppercase font-bold tracking-wider text-neutral-400 font-mono mb-1">Cuidado na entrega</p>
               <span className="font-sans text-sm font-black text-amber-400">100% Protegido</span>
             </div>
 
