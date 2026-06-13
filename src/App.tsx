@@ -26,12 +26,15 @@ export default function App() {
   // Navigation layout routing
   const [currentView, setCurrentView] = useState<'home' | 'reviews'>(() => {
     const params = new window.URLSearchParams(window.location.search);
-    const hash = window.location.hash;
+    const hash = window.location.hash.toLowerCase();
+    const path = window.location.pathname.toLowerCase();
     if (
       params.get('view') === 'reviews' || 
       params.get('p') === 'avaliacoes' || 
-      hash === '#avaliacoes' || 
-      hash === '#reviews'
+      hash.includes('avaliacoes') || 
+      hash.includes('reviews') ||
+      path.includes('avaliacoes') ||
+      path.includes('reviews')
     ) {
       return 'reviews';
     }
@@ -42,18 +45,25 @@ export default function App() {
   useEffect(() => {
     const handlePopState = () => {
       const params = new window.URLSearchParams(window.location.search);
-      const hash = window.location.hash;
+      const hash = window.location.hash.toLowerCase();
+      const path = window.location.pathname.toLowerCase();
       if (
         params.get('view') === 'reviews' || 
         params.get('p') === 'avaliacoes' || 
-        hash === '#avaliacoes' || 
-        hash === '#reviews'
+        hash.includes('avaliacoes') || 
+        hash.includes('reviews') ||
+        path.includes('avaliacoes') ||
+        path.includes('reviews')
       ) {
         setCurrentView('reviews');
+        window.scrollTo({ top: 0 });
       } else {
         setCurrentView('home');
       }
     };
+
+    // Run immediately on page mount to correct any browser sync timings
+    handlePopState();
 
     window.addEventListener('popstate', handlePopState);
     window.addEventListener('hashchange', handlePopState);
