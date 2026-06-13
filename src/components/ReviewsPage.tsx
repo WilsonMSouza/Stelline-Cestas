@@ -107,7 +107,7 @@ const INITIAL_REVIEWS: LocalReview[] = [
     rating: 5,
     date: "29 de Abril, 2026",
     basket: "Cesta Amanhecer",
-    comment: "Tudo absolutamente maravilhoso. O bolo artesanal de laranja é extremamente fofinho e perfumado. Os frios são de marcas nobres e de ótima apresentação, tudo muito fresquinho e bem vedado. Stelline é a melhor de Cascavel disparada!",
+    comment: "Tudo absolutamente maravilhoso. O bolo artesanal de laranja é extremamente fofinho e perfumado. Os frios são de marcas nobres e de ótima apresentação, tudo muito fresquinho e bem vedado. Stelline Cestas é a melhor de Cascavel disparada!",
     likes: 12
   }
 ];
@@ -122,7 +122,26 @@ export default function ReviewsPage({ onBackToHome, onScrollToElement }: Reviews
     const saved = localStorage.getItem("stelline_client_reviews");
     if (saved) {
       try {
-        return JSON.parse(saved);
+        const parsed = JSON.parse(saved) as LocalReview[];
+        
+        // 1. Map existing reviews, merging latest code definitions from INITIAL_REVIEWS to reflect changes
+        const updatedParsed = parsed.map(savedRev => {
+          const initialMatch = INITIAL_REVIEWS.find(r => r.id === savedRev.id);
+          if (initialMatch) {
+            return {
+              ...savedRev,
+              ...initialMatch,
+              likes: savedRev.likes, // preserve interactive user state
+              hasLiked: savedRev.hasLiked
+            };
+          }
+          return savedRev;
+        });
+
+        // 2. Safely add any new reviews added to INITIAL_REVIEWS that are not yet in the browser's storage
+        const missingInitial = INITIAL_REVIEWS.filter(init => !parsed.some(p => p.id === init.id));
+        
+        return [...updatedParsed, ...missingInitial];
       } catch (e) {
         return INITIAL_REVIEWS;
       }
@@ -661,9 +680,9 @@ export default function ReviewsPage({ onBackToHome, onScrollToElement }: Reviews
 
       {/* FINAL BACK TO CATALOG CORE CTA FOOTER COMPONENT */}
       <div className="mt-16 text-center max-w-sm mx-auto p-8 rounded-2xl bg-neutral-950/30 border border-neutral-900/80">
-        <h5 className="font-serif text-lg font-bold text-neutral-200 mb-2">Quer encomendar uma?</h5>
+        <h5 className="font-serif text-lg font-bold text-neutral-200 mb-2">Que tal preparar uma surpresa também?</h5>
         <p className="text-xs text-neutral-400 font-sans leading-relaxed mb-6">
-          Nossas cestas são limitadas por dia. Garanta a agendamento ideal do seu presente.
+          Como nossas produções artesanais são diárias e limitadas, recomendamos garantir o agendamento do seu presente com antecedência.
         </p>
         <button
           onClick={onBackToHome}
