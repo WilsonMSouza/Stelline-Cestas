@@ -4,6 +4,7 @@ import { Product, SizeOption, CartItem, AddonCartItem } from "./types";
 import BasketCard from "./components/BasketCard";
 import AddonCard from "./components/AddonItem";
 import CartDrawer from "./components/CartDrawer";
+import ReviewsPage from "./components/ReviewsPage";
 import { 
   ShoppingBag, 
   MapPin, 
@@ -17,10 +18,14 @@ import {
   ShoppingCart, 
   Heart,
   ChevronDown,
-  Info
+  Info,
+  Star
 } from "lucide-react";
 
 export default function App() {
+  // Navigation layout routing
+  const [currentView, setCurrentView] = useState<'home' | 'reviews'>('home');
+
   // Cart items state: Baskets with selected sizes & quantities
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   
@@ -122,6 +127,29 @@ export default function App() {
     triggerNotification("Sua sacola de compras foi esvaziada.");
   };
 
+  // Handle smooth redirection to home sections when in sub-views
+  const handleNavigateToSection = (sectionId: string) => {
+    if (currentView !== "home") {
+      setCurrentView("home");
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
+  const handleGoToReviewsList = () => {
+    setCurrentView("reviews");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   // Summary counts for navigation badge indicators
   const totalBasketCount = cartItems.reduce((acc, item) => acc + item.quantity, 0);
   const totalAddonCount = addonItems.reduce((acc, item) => acc + item.quantity, 0);
@@ -156,11 +184,10 @@ export default function App() {
       {/* Persistent Navigation bar with Glassmorphism */}
       <header className="fixed top-0 left-0 right-0 h-20 z-40 bg-neutral-950/80 backdrop-blur-xl border-b border-amber-900/10 shadow-[0_4px_30px_rgba(0,0,0,0.4)] transition-all duration-300">
         <div className="max-w-7xl mx-auto h-full px-6 md:px-12 flex justify-between items-center">
-          
-          {/* Logo brand linked to top of pages */}
-          <a
-            href="#"
-            className="flex items-center gap-4 group transition-transform duration-300 active:scale-95"
+                    {/* Logo brand linked to top of pages */}
+          <button
+            onClick={() => { setCurrentView('home'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+            className="flex items-center gap-4 group transition-transform duration-300 active:scale-95 text-left cursor-pointer"
             aria-label="Ir para o topo"
           >
             <img 
@@ -177,34 +204,40 @@ export default function App() {
                 Cestas de Café
               </span>
             </div>
-          </a>
+          </button>
 
           {/* Desktop links */}
-          <nav className="hidden md:flex items-center gap-10">
-            <a 
-              href="#cardapio" 
-              className="text-amber-400 border-b-2 border-amber-400 pb-1.5 pt-1 text-[11px] font-bold uppercase tracking-widest transition-opacity"
+          <nav className="hidden md:flex items-center gap-8">
+            <button 
+              onClick={() => handleNavigateToSection("cardapio")}
+              className={`pb-1 px-1 text-[11px] font-bold uppercase tracking-widest transition-all cursor-pointer ${currentView === 'home' ? 'text-amber-400 border-b-2 border-amber-400' : 'text-neutral-400 hover:text-amber-300'}`}
             >
               Cardápio
-            </a>
-            <a 
-              href="#adicionais" 
-              className="text-neutral-400 hover:text-amber-300 text-[11px] font-bold uppercase tracking-widest transition-colors duration-300"
+            </button>
+            <button 
+              onClick={() => handleNavigateToSection("adicionais")}
+              className="text-neutral-400 hover:text-amber-300 pb-1 px-1 text-[11px] font-bold uppercase tracking-widest transition-all cursor-pointer"
             >
               Adicionais
-            </a>
-            <a 
-              href="#funcionamento" 
-              className="text-neutral-400 hover:text-amber-300 text-[11px] font-bold uppercase tracking-widest transition-colors duration-300"
+            </button>
+            <button 
+              onClick={() => handleNavigateToSection("funcionamento")}
+              className="text-neutral-400 hover:text-amber-300 pb-1 px-1 text-[11px] font-bold uppercase tracking-widest transition-all cursor-pointer"
             >
               Funcionamento
-            </a>
-            <a 
-              href="#sobre" 
-              className="text-neutral-400 hover:text-amber-300 text-[11px] font-bold uppercase tracking-widest transition-colors duration-300"
+            </button>
+            <button 
+              onClick={() => handleNavigateToSection("sobre")}
+              className="text-neutral-400 hover:text-amber-300 pb-1 px-1 text-[11px] font-bold uppercase tracking-widest transition-all cursor-pointer"
             >
               Sobre Nós
-            </a>
+            </button>
+            <button 
+              onClick={handleGoToReviewsList}
+              className={`pb-1 px-1 text-[11px] font-bold uppercase tracking-widest transition-all cursor-pointer ${currentView === 'reviews' ? 'text-amber-400 border-b-2 border-amber-400' : 'text-neutral-400 hover:text-amber-300'}`}
+            >
+              Avaliações
+            </button>
           </nav>
 
           {/* Right Action Icons */}
@@ -234,8 +267,17 @@ export default function App() {
       </header>
 
       <main className="pt-20">
-        
-        {/* Luxury Hero Banner Section */}
+        {currentView === "reviews" ? (
+          <ReviewsPage 
+            onBackToHome={() => {
+              setCurrentView("home");
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            onScrollToElement={handleNavigateToSection}
+          />
+        ) : (
+          <>
+            {/* Luxury Hero Banner Section */}
         <section className="relative min-h-[85vh] flex items-center px-6 md:px-12 py-24 border-b border-amber-900/10">
           <div className="absolute inset-0 z-0 overflow-hidden">
             <img 
@@ -283,9 +325,26 @@ export default function App() {
                 <p className="font-medium text-amber-300/90">
                   Agradecemos de coração por confiar em nosso cuidado e dedicação!
                 </p>
-                <div className="pt-3 text-[11px] uppercase tracking-widest text-[#a89d88] border-t border-amber-900/10">
+                <div className="pt-3 text-[11px] uppercase tracking-widest text-[#a89d88] border-t border-amber-900/10 mb-7">
                   Com carinho,<br />
                   <span className="font-serif text-xl tracking-tight text-amber-400 normal-case italic font-bold">Jaqueline e Maristela</span>
+                </div>
+
+                <div className="flex flex-wrap gap-3.5">
+                  <button
+                    onClick={() => handleNavigateToSection("cardapio")}
+                    className="px-6 py-3 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-neutral-950 font-sans text-xs font-black uppercase tracking-widest rounded-xl shadow-lg flex items-center gap-2 cursor-pointer transition-all hover:shadow-amber-400/5 hover:-translate-y-0.5 select-none active:scale-95"
+                  >
+                    <span>Explorar Cardápio</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                  <button
+                    onClick={handleGoToReviewsList}
+                    className="px-6 py-3 bg-neutral-950/60 hover:bg-neutral-900 text-amber-400 font-sans text-xs font-black uppercase tracking-widest rounded-xl border border-amber-500/20 hover:border-amber-400/80 flex items-center gap-2 cursor-pointer transition-all hover:-translate-y-0.5 select-none active:scale-95"
+                  >
+                    <span>Avaliações dos Clientes</span>
+                    <span className="text-amber-300 font-bold font-sans">★ 4.9</span>
+                  </button>
                 </div>
               </div>
 
@@ -341,6 +400,96 @@ export default function App() {
                 />
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Interactive Reviews Teaser Banner Section */}
+        <section className="py-24 px-6 md:px-12 bg-neutral-950/40 border-t border-b border-neutral-900/40">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left Column: Visual summary scores */}
+            <div className="lg:col-span-5 space-y-6">
+              <span className="text-[10px] md:text-[11px] uppercase tracking-[0.3em] font-bold text-amber-500 block">
+                Comprovado por nossos clientes
+              </span>
+              <h3 className="font-serif text-3xl sm:text-4.5xl font-bold text-neutral-100 tracking-tight leading-snug">
+                Excelência que se traduz em <span className="text-amber-400 italic font-medium">Histórias de Amor</span>
+              </h3>
+              <p className="text-sm text-neutral-400 leading-relaxed font-sans text-justify">
+                Nossos clientes compartilham suas sensações reais ao presentear e receber as cestas Stelline. São dezenas de depoimentos sinceros repletos de carinho, sabor e surpresas inesquecíveis.
+              </p>
+              
+              <div className="flex items-center gap-4.5 pt-2">
+                <div className="text-center bg-neutral-950/80 p-4 rounded-xl border border-neutral-900 flex-1">
+                  <span className="text-3xl font-serif font-black text-amber-500 block tracking-tight">4.9<span className="text-xs text-neutral-500 font-normal">/5</span></span>
+                  <span className="text-[9px] uppercase tracking-wider font-extrabold text-neutral-500 font-mono">Feedback Médio</span>
+                </div>
+                <div className="text-center bg-neutral-950/80 p-4 rounded-xl border border-neutral-900 flex-1">
+                  <span className="text-3xl font-serif font-black text-amber-500 block tracking-tight">100%</span>
+                  <span className="text-[9px] uppercase tracking-wider font-extrabold text-neutral-500 font-mono">Recomendado</span>
+                </div>
+              </div>
+
+              <div className="pt-4">
+                <button
+                  onClick={handleGoToReviewsList}
+                  className="px-6 py-3 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-neutral-950 font-sans text-xs font-black uppercase tracking-widest rounded-xl shadow-lg flex items-center gap-2 cursor-pointer transition-all hover:shadow-amber-400/5 hover:-translate-y-0.5"
+                >
+                  <span>Ver Todos os Depoimentos</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+
+            {/* Right Column: Teaser cards representation of 2 actual top reviews */}
+            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              
+              <div className="bg-neutral-950/60 p-6 rounded-2xl border border-neutral-900 shadow-xl relative overflow-hidden flex flex-col justify-between h-full">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-1">
+                    {[1, 2, 3, 4, 5].map((s) => (
+                      <Star key={s} className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
+                    ))}
+                  </div>
+                  <p className="text-xs sm:text-sm text-neutral-300 italic font-sans text-justify font-light leading-relaxed">
+                    "Superou todas as minhas expectativas! Comprei a Cesta Amanhecer Premium para o aniversário da minha mãe e ela ficou encantada. Apresentação impecável e produtos super frescos!"
+                  </p>
+                </div>
+                <div className="pt-4 mt-6 border-t border-neutral-900/60 flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-amber-400/10 text-amber-400 border border-amber-500/10 flex items-center justify-center font-serif text-xs font-bold">
+                    MS
+                  </div>
+                  <div>
+                    <h5 className="text-xs font-serif font-bold text-neutral-200">Mariana Silveira</h5>
+                    <p className="text-[9px] text-neutral-500 font-sans font-medium">Cascavel - Centro</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-neutral-950/60 p-6 rounded-2xl border border-neutral-900 shadow-xl relative overflow-hidden flex flex-col justify-between h-full">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-1">
+                    {[1, 2, 3, 4, 5].map((s) => (
+                      <Star key={s} className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
+                    ))}
+                  </div>
+                  <p className="text-xs sm:text-sm text-neutral-300 italic font-sans text-justify font-light leading-relaxed">
+                    "Surpreendi minha noiva com a Cesta Romântica no nosso aniversário de namoro. Pão de queijo quentinho, frutas perfeitas e embalagem em MDF de coração maravilhosa!"
+                  </p>
+                </div>
+                <div className="pt-4 mt-6 border-t border-neutral-900/60 flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-amber-400/10 text-amber-400 border border-amber-500/10 flex items-center justify-center font-serif text-xs font-bold">
+                    RS
+                  </div>
+                  <div>
+                    <h5 className="text-xs font-serif font-bold text-neutral-200">Rodrigo G. Souza</h5>
+                    <p className="text-[9px] text-neutral-500 font-sans font-medium">Parque Verde, Cascavel</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
           </div>
         </section>
 
@@ -541,7 +690,8 @@ export default function App() {
             </div>
           </div>
         </section>
-
+          </>
+        )}
       </main>
 
       {/* Elegant, detailed footer matching brand architecture design */}
@@ -574,10 +724,11 @@ export default function App() {
             </div>
 
             {/* Quick footer navigation anchors */}
-            <div className="flex flex-wrap gap-8 text-[11px] font-bold uppercase tracking-widest text-neutral-400">
-              <a href="#cardapio" className="hover:text-amber-400 transition-colors">Cardápio</a>
-              <a href="#adicionais" className="hover:text-amber-400 transition-colors">Adicionais</a>
-              <a href="#funcionamento" className="hover:text-amber-400 transition-colors">Como Funciona</a>
+            <div className="flex flex-wrap gap-6 text-[11px] font-bold uppercase tracking-widest text-neutral-400 items-center">
+              <button onClick={() => handleNavigateToSection("cardapio")} className="hover:text-amber-400 transition-colors cursor-pointer">Cardápio</button>
+              <button onClick={() => handleNavigateToSection("adicionais")} className="hover:text-amber-400 transition-colors cursor-pointer">Adicionais</button>
+              <button onClick={() => handleNavigateToSection("funcionamento")} className="hover:text-amber-400 transition-colors cursor-pointer">Como Funciona</button>
+              <button onClick={handleGoToReviewsList} className="hover:text-amber-400 transition-colors text-amber-500 cursor-pointer">★ Avaliações ★</button>
               <a href="tel:45988197223" className="hover:text-amber-400 transition-colors">Contato</a>
               <a href="https://wa.me/5545988197223" target="_blank" rel="noreferrer" className="hover:text-amber-400 transition-colors">WhatsApp</a>
             </div>
