@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { PRODUCTS, ADDONS, formatCurrency } from "./data";
 import { Product, SizeOption, CartItem, AddonCartItem } from "./types";
 import BasketCard from "./components/BasketCard";
@@ -24,7 +24,44 @@ import {
 
 export default function App() {
   // Navigation layout routing
-  const [currentView, setCurrentView] = useState<'home' | 'reviews'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'reviews'>(() => {
+    const params = new window.URLSearchParams(window.location.search);
+    const hash = window.location.hash;
+    if (
+      params.get('view') === 'reviews' || 
+      params.get('p') === 'avaliacoes' || 
+      hash === '#avaliacoes' || 
+      hash === '#reviews'
+    ) {
+      return 'reviews';
+    }
+    return 'home';
+  });
+
+  // Track popstate/hashchange to switch views fluidly (e.g., using browser back button or Linktree click)
+  useEffect(() => {
+    const handlePopState = () => {
+      const params = new window.URLSearchParams(window.location.search);
+      const hash = window.location.hash;
+      if (
+        params.get('view') === 'reviews' || 
+        params.get('p') === 'avaliacoes' || 
+        hash === '#avaliacoes' || 
+        hash === '#reviews'
+      ) {
+        setCurrentView('reviews');
+      } else {
+        setCurrentView('home');
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    window.addEventListener('hashchange', handlePopState);
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+      window.removeEventListener('hashchange', handlePopState);
+    };
+  }, []);
 
   // Cart items state: Baskets with selected sizes & quantities
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
@@ -148,6 +185,7 @@ export default function App() {
   const handleGoToReviewsList = () => {
     setCurrentView("reviews");
     window.scrollTo({ top: 0, behavior: "smooth" });
+    window.history.pushState(null, "", "#avaliacoes");
   };
 
   // Summary counts for navigation badge indicators
@@ -272,6 +310,7 @@ export default function App() {
             onBackToHome={() => {
               setCurrentView("home");
               window.scrollTo({ top: 0, behavior: "smooth" });
+              window.history.pushState(null, "", window.location.pathname);
             }}
             onScrollToElement={handleNavigateToSection}
           />
