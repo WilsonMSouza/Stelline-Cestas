@@ -269,7 +269,7 @@ export default function ReviewsPage({ onBackToHome, onScrollToElement }: Reviews
           Surpresas que emocionam
         </span>
         <h2 className="font-serif text-4xl sm:text-5xl font-bold text-neutral-100 tracking-tight leading-tight">
-          O que dizem os nossos <span className="text-amber-400 italic font-medium">Queridos Clientes</span>
+          O que dizem os nossos <span className="text-amber-400 italic font-medium">clientes</span>
         </h2>
         <div className="h-1 w-20 bg-amber-400 mx-auto mt-6 mb-4 rounded-full"></div>
         <p className="text-sm sm:text-base text-neutral-400 font-sans leading-relaxed max-w-xl mx-auto text-justify sm:text-center">
