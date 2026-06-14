@@ -770,7 +770,7 @@ export default function App() {
               <button onClick={() => handleNavigateToSection("funcionamento")} className="hover:text-amber-400 transition-colors cursor-pointer">Como Funciona</button>
               <button onClick={handleGoToReviewsList} className="hover:text-amber-400 transition-colors text-amber-500 cursor-pointer">★ Avaliações ★</button>
               <a href="tel:45988197223" className="hover:text-amber-400 transition-colors">Contato</a>
-              <a href="https://wa.me/5545988197223" target="_blank" rel="noreferrer" className="hover:text-amber-400 transition-colors">WhatsApp</a>
+              <a href="https://wa.me/5545988197223?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20cestas." target="_blank" rel="noreferrer" className="hover:text-amber-400 transition-colors">WhatsApp</a>
             </div>
 
           </div>
