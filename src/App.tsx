@@ -600,18 +600,9 @@ export default function App() {
                     Como Encomendar
                   </h4>
                   <p className="text-sm leading-relaxed text-neutral-400 font-sans">
-                    Seu pedido deve ser feito com antecedência mínima de 24 horas para podermos selecionar os produtos com o frescor ideal.
+                    Acesse o nosso Cardápio, selecione as suas cestas favoritas e, se desejar, adicione itens adicionais para personalizar o presente. Depois, é só acessar a Sacola, conferir os produtos escolhidos e preencher os dados solicitados. Para finalizar, clique em Reservar Via WhatsApp — nossa equipe informará o valor da entrega e passará os dados para pagamento.
                   </p>
                 </div>
-                
-                {/* Visual contact indicator helper for instant dial */}
-                <a 
-                  href="tel:45988197223"
-                  className="mt-6 bg-neutral-950 px-4.5 py-2.5 rounded-full border border-amber-500/20 hover:border-amber-500/50 flex items-center gap-2 text-xs text-neutral-200 hover:text-white transition-all font-semibold uppercase tracking-wider font-sans shadow-lg cursor-pointer"
-                >
-                  <Phone className="w-3.5 h-3.5 text-amber-500" />
-                  <span>(45) 98819 7223</span>
-                </a>
               </div>
 
               {/* Card item 2: Payment options */}
