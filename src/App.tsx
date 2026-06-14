@@ -718,11 +718,11 @@ export default function App() {
                 <div className="space-y-2 md:col-span-2 pt-3 border-t border-neutral-900/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-amber-400/90 italic">
                   <p className="flex items-center gap-1.5">
                     <span className="inline-block w-1.5 h-1.5 bg-amber-400 rounded-full"></span>
-                    Entregas feitas todos os dias da semana, apenas no município de Cascavel.
+                    Entregas feitas todos os dias da semana, apenas no município de Cascavel - PR.
                   </p>
                   <p className="flex items-center gap-1.5">
                     <span className="inline-block w-1.5 h-1.5 bg-amber-400 rounded-full"></span>
-                    Pedido com antecedência mínima obrigatória de 24 horas.
+                    Pedido com antecedência mínima de 24 horas.
                   </p>
                 </div>
 
