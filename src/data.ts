@@ -15,6 +15,8 @@ import cestaHappyHourImg from "./assets/images/cesta_happy_hour_(final-2).png";
 import cestaPresenteElaImg from "./assets/images/cesta_presente_ela_(final).png";
 // @ts-ignore
 import cestaPresenteEleImg from "./assets/images/cesta_presente_ele_(final).png";
+// @ts-ignore
+import cestaFreeImg from "./assets/images/cesta_free_(final).png";
 
 export const PRODUCTS: Product[] = [
   {
@@ -213,6 +215,34 @@ export const PRODUCTS: Product[] = [
           "Mix de amendoim crocante",
           "Trufas",
           "Embalagem: Caixa cartonada redonda, 25x10cm, com laço de cetim"
+        ]
+      }
+    ]
+  },
+  {
+    id: "cesta-free",
+    name: "Cesta Free - Sem glúten e Sem lactose",
+    tagline: "Sabor gourmet completo, elegância e afeto sem glúten e sem lactose",
+    description: "Uma experiência gastronômica completa e inclusiva para encantar sem restrições. Traz salgados assados artesanais (empadinha, esfirra e calzone), quitutes doces irresistíveis como bolo de pote e bisnaguinhas de brioche, frios nobres acompanhados de queijo e requeijão sem lactose, além de frutas frescas e bebidas selecionadas. O presente perfeito para celebrar com leveza, segurança e muito sabor.",
+    image: cestaFreeImg,
+    badge: "Sem Glúten e Lactose",
+    sizes: [
+      {
+        label: "Tamanho M Único",
+        shortLabel: "Tam. M",
+        price: 237.00,
+        description: "A combinação perfeita de salgados assados, doces, frios e bebidas sem glúten e sem lactose (serve 2 pessoas).",
+        items: [
+          "Empadinha (de frango ou de frango com palmito)",
+          "Esfirra (de frango com requeijão ou de carne)",
+          "Calzone(de frango com requeijão ou calabresa com requeijão)",
+          "Bisnaguinha de brioche, bolo de pote, bolacha confeitada e biscoito de côco",
+          "Queijo muçarela sem lactose, salame italiano e Lombo canadense",
+          "Requeijão sem lactose",
+          "Uvas e morangos",
+          "Suco de uva 250ml a 300ml (pronto ou fracionado)",
+          "Drip coffee especial gourmet",
+          "Sache de chá especial",
         ]
       }
     ]
