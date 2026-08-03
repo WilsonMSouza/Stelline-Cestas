@@ -17,8 +17,36 @@ import cestaPresenteElaImg from "./assets/images/cesta_presente_ela_(final).png"
 import cestaPresenteEleImg from "./assets/images/cesta_presente_ele_(final).png";
 // @ts-ignore
 import cestaFreeImg from "./assets/images/cesta_free_(final).png";
+// @ts-ignore
+import cestaEspDiaDosPaisImg from "./assets/images/cesta_esp_dia_dos_pais_(final).png";
 
 export const PRODUCTS: Product[] = [
+  {
+    id: "cesta-especial-dia-dos-pais",
+    name: "Cesta Especial Dia dos Pais",
+    tagline: "Edição Limitada • Homenagem inesquecível ao seu herói",
+    description: "Uma curadoria refinada e elegante criada especialmente para homenagear o Dia dos Pais. Acompanha opção de bebidas finas (Frisante, Espumante ou Vinho Espanhol), seleção nobre de queijos e charcutaria, castanhas, grissini, pretzel, trufas artesanais e mel em um exclusivo box redondo em MDF.",
+    image: cestaEspDiaDosPaisImg,
+    badge: "Especial Dia dos Pais",
+    isSpecial: true,
+    sizes: [
+      {
+        label: "Tamanho M Único",
+        shortLabel: "Tam. M",
+        price: 247.00,
+        description: "A escolha perfeita para homenagear seu pai com uma experiência gastronômica e sofisticada.",
+        items: [
+          "3 opções de bebida à escolha: 1) Frisante italiano Giacondi Lambrusco, 2) Espumante Garibaldi - Moscatel, ou 3) Vinho Espanhol Condesa de Leganza",
+          "Mix de queijos: muçarela, provolone, minas padrão e gouda",
+          "Charcutaria: salame italiano e lombo canadense",
+          "Mix de castanha do pará e de caju",
+          "Grissini e pretzel",
+          "Trufas artesanais e mel",
+          "Embalagem: box redondo em MDF"
+        ]
+      }
+    ]
+  },
   {
     id: "cesta-amanhecer",
     name: "Cesta Amanhecer",
