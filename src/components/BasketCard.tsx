@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Product, SizeOption } from "../types";
 import { formatCurrency } from "../data";
-import { Heart, MessageSquare, ShoppingBag, Sparkles, X, Check, Gift } from "lucide-react";
+import { Heart, MessageSquare, ShoppingBag, Sparkles, X, Check } from "lucide-react";
 
 interface BasketCardProps {
   key?: React.Key;
@@ -23,22 +23,22 @@ export default function BasketCard({ product, onAddToCart }: BasketCardProps) {
   return (
     <article
       id={`basket-${product.id}`}
-      className={`relative group overflow-hidden rounded-2xl flex flex-col md:flex-row transition-all duration-300 border bg-neutral-950/40 backdrop-blur-md hover:border-amber-500/60 hover:shadow-[0_4px_30px_rgba(242,202,80,0.12)] ${
+      className={`relative group overflow-hidden rounded-2xl flex flex-col md:flex-row transition-all duration-300 border bg-neutral-950/40 backdrop-blur-md hover:border-amber-500/45 hover:shadow-[0_4px_30px_rgba(242,202,80,0.06)] ${
         product.isSpecial 
-          ? "border-amber-400/50 shadow-[0_0_20px_rgba(245,158,11,0.1)] ring-1 ring-amber-400/30" 
+          ? "border-yellow-700/30" 
           : "border-amber-900/20"
       }`}
     >
       {/* Badge Ribbon */}
       {product.badge && (
         <span
-          className={`absolute top-4 left-4 z-30 px-3.5 py-1.5 text-[10px] font-bold tracking-widest uppercase rounded-full border backdrop-blur-md flex items-center gap-1.5 shadow-lg ${
+          className={`absolute top-4 left-4 z-30 px-3.5 py-1.5 text-[10px] font-semibold tracking-widest uppercase rounded-full border backdrop-blur-md flex items-center gap-1.5 ${
             product.isSpecial
-              ? "bg-gradient-to-r from-amber-400 to-amber-500 text-neutral-950 font-black border-amber-300 shadow-amber-500/20"
+              ? "bg-red-950/85 text-red-300 border-red-850/40"
               : "bg-neutral-900/85 text-amber-300 border-amber-500/20"
           }`}
         >
-          {product.isSpecial ? <Sparkles className="w-3.5 h-3.5 text-neutral-950 fill-neutral-950" /> : null}
+          {product.isSpecial ? <Heart className="w-3 h-3 fill-current" /> : null}
           {product.badge}
         </span>
       )}

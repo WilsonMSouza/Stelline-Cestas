@@ -541,7 +541,9 @@ export default function ReviewsPage({ onBackToHome, onScrollToElement }: Reviews
                     <option value="Cesta Romântica">Cesta Romântica</option>
                     <option value="Cesta Colonial">Cesta Colonial</option>
                     <option value="Cesta Kids">Cesta Kids</option>
-                    <option value="Cesta Happy Hour">Cesta Happy Hour</option>
+                    <option value="Cesta Happy Hour Beer">Cesta Happy Hour Beer</option>
+                    <option value="Cesta Happy Hour Wine">Cesta Happy Hour Wine</option>
+                    <option value="Cesta Free - Sem glúten e Sem lactose">Cesta Free - Sem glúten e Sem lactose</option>
                     <option value="Cesta Presente para Ela">Cesta Presente para Ela</option>
                     <option value="Cesta Presente para Ele">Cesta Presente para Ele</option>
                   </select>

@@ -10,43 +10,17 @@ import cestaKidsImg from "./assets/images/cesta_kids_(final).png";
 // @ts-ignore
 import cestaRomanticaImg from "./assets/images/cesta_romantica_(final-2).png";
 // @ts-ignore
-import cestaHappyHourImg from "./assets/images/cesta_happy_hour_(final-2).png";
+import cestaHappyHourBeerImg from "./assets/images/cesta_happy_hour_beer_(final).png";
+// @ts-ignore
+import cestaHappyHourWineImg from "./assets/images/cesta_happy_hour_wine_(final).png";
 // @ts-ignore
 import cestaPresenteElaImg from "./assets/images/cesta_presente_ela_(final).png";
 // @ts-ignore
 import cestaPresenteEleImg from "./assets/images/cesta_presente_ele_(final).png";
 // @ts-ignore
 import cestaFreeImg from "./assets/images/cesta_free_(final).png";
-// @ts-ignore
-import cestaEspDiaDosPaisImg from "./assets/images/cesta_esp_dia_dos_pais_(final).png";
 
 export const PRODUCTS: Product[] = [
-  {
-    id: "cesta-especial-dia-dos-pais",
-    name: "Cesta Especial Dia dos Pais",
-    tagline: "Edição Limitada • Homenagem inesquecível ao seu herói",
-    description: "Uma curadoria refinada e elegante criada especialmente para homenagear o Dia dos Pais. Acompanha opção de bebidas finas (Frisante, Espumante ou Vinho Espanhol), seleção nobre de queijos e charcutaria, castanhas, grissini, pretzel, trufas artesanais e mel em um exclusivo box redondo em MDF.",
-    image: cestaEspDiaDosPaisImg,
-    badge: "Especial Dia dos Pais",
-    isSpecial: true,
-    sizes: [
-      {
-        label: "Tamanho M Único",
-        shortLabel: "Tam. M",
-        price: 247.00,
-        description: "A escolha perfeita para homenagear seu pai com uma experiência gastronômica e sofisticada.",
-        items: [
-          "3 opções de bebida à escolha: 1) Frisante italiano Giacondi Lambrusco, 2) Espumante Garibaldi - Moscatel, ou 3) Vinho Espanhol Condesa de Leganza",
-          "Mix de queijos: muçarela, provolone, minas padrão e gouda",
-          "Charcutaria: salame italiano e lombo canadense",
-          "Mix de castanha do pará e de caju",
-          "Grissini e pretzel",
-          "Trufas artesanais e mel",
-          "Embalagem: box redondo em MDF"
-        ]
-      }
-    ]
-  },
   {
     id: "cesta-amanhecer",
     name: "Cesta Amanhecer",
@@ -65,7 +39,7 @@ export const PRODUCTS: Product[] = [
           "Croissant amanteigado",
           "Pão de queijo, bolacha artesanal, torradinhas e stroopwafel",
           "Frios especiais fatiados: queijo minas padrão, queijo muçarela, salame italiano e lombo canadense",
-          "Geleia artesanal e manteiga",
+          "Geleia artesanal e requeijão",
           "Bombom artesanal e frutas da época",
           "Suco de uva integral (250 a 300 ml)",
           "Drip coffee especial gourmet",
@@ -82,9 +56,9 @@ export const PRODUCTS: Product[] = [
         items: [
           "Mini bolo artesanal de laranja",
           "Croissant amanteigado",
-          "Pão de queijo, bolacha artesanal, torradinhas e stroopwafel",
+          "Pão de queijo, bolacha artesanal, torradinhas e pãozinho de nata",
           "Frios especiais: queijo minas padrão, queijo muçarela, salame italiano e lombo canadense",
-          "Geleia artesanal e manteiga",
+          "Geleia artesanal e requeijão",
           "Bombom artesanal e frutas da época",
           "Suco de uva integral (250 a 300 ml)",
           "Drip coffee especial gourmet",
@@ -110,9 +84,9 @@ export const PRODUCTS: Product[] = [
         items: [
           "Bolo artesanal de laranja",
           "Croissant amanteigado",
-          "Pão de queijo com catupiry, grissini, sfogliatini e torradinhas",
-          "Frios especiais: queijo minas padrão, queijo brie ou gouda, salame italiano e lombo canadense",
-          "Geleia artesanal, manteiga e mel",
+          "Pão de queijo com catupiry, torradinhas e pães caseirinhos pequenos",
+          "Frios especiais: queijo minas padrão, muçarela ou gouda, salame italiano e lombo canadense",
+          "Geleia artesanal, requeijão e mel",
           "Iogurte grego, granola, damasco e castanha",
           "Bombom Ferrero Rocher e frutas da época",
           "Suco de uva integral (500 ml)",
@@ -182,10 +156,10 @@ export const PRODUCTS: Product[] = [
         description: "Uma inesquecível celebração da paixão e do afeto (serve 2 pessoas).",
         items: [
           "Pão de ló e croissant amanteigado",
-          "Cupcake e stroppwafel",
+          "Cupcake e pãozinho de nata",
           "Bolachas artesanais, pão de queijo, e torradinhas",
           "Frios especiais: queijo minas padrão, queijo muçarela, salame italiano e lombo canadense",
-          "Geléia artesanal e manteiga",
+          "Geléia artesanal e requeijão",
           "Frutas da época e trufas",
           "Suco de uva (long neck) gaseificado",
           "Drip coffee (café para coar)",
@@ -222,17 +196,18 @@ export const PRODUCTS: Product[] = [
     ]
   },
   {
-    id: "cesta-happy-hour",
-    name: "Cesta Happy Hour",
-    tagline: "Sabores que convidam ao brinde",
-    description: "A combinação ideal para transformar qualquer comemoração em um momento memorável. Reúne uma seleção rigorosa de cervejas premium (Heineken, Stella Artois ou Artesanal) harmonizadas perfeitamente com salame colonial, mix de queijos selecionados (Minas e provolone), patê de ricota temperado, grissinis crocantes e um toque final de trufas artesanais irresistíveis.",
-    image: cestaHappyHourImg,
+    id: "cesta-happy-hour-beer",
+    name: "Cesta Happy Hour Beer",
+    tagline: "Sabores que convidam ao brinde com cervejas premium e petiscos nobres",
+    description: "A combinação ideal para transformar qualquer celebração em um brinde memorável. Reúne 2 cervejas long neck selecionadas (Heineken ou Stella Artois) harmonizadas com salame italiano, lombo canadense, mix de queijos (minas padrão e provolone), patê de ricota, pãozinho artesanal, torradinhas, grissini, mini pretties, mix de amendoim crocante e trufas artesanais. Tudo apresentado com elegância e requinte.",
+    image: cestaHappyHourBeerImg,
+    badge: "Brinde Especial",
     sizes: [
       {
         label: "Tamanho M Único",
         shortLabel: "Tam. M",
         price: 208.00,
-        description: "A harmonização ideal para o fim do dia (serve 2 pessoas).",
+        description: "A harmonização perfeita com cervejas premium e petiscos finos para celebrar (serve 2 pessoas).",
         items: [
           "Cerveja long neck (2 unidades de Heineken ou Stella Artois)",
           "Grissini",
@@ -243,6 +218,33 @@ export const PRODUCTS: Product[] = [
           "Mix de amendoim crocante",
           "Trufas",
           "Embalagem: Caixa cartonada redonda, 25x10cm, com laço de cetim"
+        ]
+      }
+    ]
+  },
+  {
+    id: "cesta-happy-hour-wine",
+    name: "Cesta Happy Hour Wine",
+    tagline: "Harmonização nobre e sofisticada com vinho ou espumante e queijos especiais",
+    description: "Uma experiência gastronômica requintada e envolvente. Oferece 3 opções de bebidas consagradas à sua escolha (Frisante italiano Giacondi Lambrusco, Espumante Garibaldi Moscatel ou Vinho Espanhol Condesa de Leganza), harmonizadas com mix de queijos nobres (muçarela, provolone, minas padrão e gouda), charcutaria selecionada (salame italiano e lombo canadense), castanhas nobres, pão caseirinho fatiado, requeijão cremoso, grissini, pretzel, trufas artesanais e mel. Apresentada com extremo requinte em um box redondo em MDF.",
+    image: cestaHappyHourWineImg,
+    badge: "Harmonização Nobre",
+    sizes: [
+      {
+        label: "Tamanho M Único",
+        shortLabel: "Tam. M",
+        price: 253.00,
+        description: "Uma celebração sofisticada com bebidas finas, queijos nobres e charcutaria selecionada (serve 2 pessoas).",
+        items: [
+          "Bebida à escolha (1 garrafa): Frisante italiano Giacondi Lambrusco, Espumante Garibaldi Moscatel ou Vinho Espanhol Condesa de Leganza",
+          "Mix de queijos: muçarela, provolone, minas padrão e gouda",
+          "Charcutaria: salame italiano e lombo canadense",
+          "Mix de castanha-do-pará e de caju",
+          "1 pão caseirinho fatiado",
+          "Requeijão (40g)",
+          "Grissini e pretzel",
+          "Trufas artesanais e mel",
+          "Embalagem: Box redondo em MDF"
         ]
       }
     ]

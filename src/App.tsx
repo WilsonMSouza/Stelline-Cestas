@@ -343,24 +343,12 @@ export default function App() {
           <div className="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 xl:col-span-7 space-y-8">
               
-              {/* Delivery Availability & Special Father's Day Campaign Pills */}
-              <div className="flex flex-wrap items-center gap-2.5">
-                <div className="inline-flex items-center gap-2.5 px-4.5 py-1.5 rounded-full border border-amber-500/35 bg-neutral-950/40 backdrop-blur-sm shadow-md">
-                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                  <span className="text-[10px] font-bold tracking-[0.16em] text-amber-300 uppercase font-sans">
-                    Disponível para Entrega Hoje
-                  </span>
-                </div>
-
-                <a 
-                  href="#basket-cesta-especial-dia-dos-pais"
-                  className="inline-flex items-center gap-2 px-4.5 py-1.5 rounded-full border border-amber-400/50 bg-gradient-to-r from-amber-500/20 to-amber-400/10 hover:from-amber-500/30 hover:to-amber-400/20 text-amber-300 hover:text-amber-200 transition-all shadow-md cursor-pointer group"
-                >
-                  <Sparkles className="w-3.5 h-3.5 text-amber-400 group-hover:scale-110 transition-transform" />
-                  <span className="text-[10px] font-black tracking-[0.16em] uppercase font-sans">
-                    Especial Dia dos Pais • Edição Limitada
-                  </span>
-                </a>
+              {/* Delivery Availability Pills */}
+              <div className="inline-flex items-center gap-2.5 px-4.5 py-1.5 rounded-full border border-amber-500/35 bg-neutral-950/40 backdrop-blur-sm shadow-md">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span className="text-[10px] font-bold tracking-[0.16em] text-amber-300 uppercase font-sans">
+                  Disponível para Entrega Hoje
+                </span>
               </div>
 
               {/* Majestic Editorial High-Contrast Headline */}
@@ -438,30 +426,6 @@ export default function App() {
         <section className="py-24 px-6 md:px-12" id="cardapio">
           <div className="max-w-7xl mx-auto">
             
-            {/* Special Father's Day Promotional Highlight Banner */}
-            <div className="mb-12 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-amber-950/50 via-neutral-950 to-amber-950/50 border border-amber-400/50 shadow-[0_0_35px_rgba(245,158,11,0.1)] flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
-              <div className="space-y-2 text-center md:text-left z-10">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/15 border border-amber-400/40 text-amber-300 text-[10px] font-bold uppercase tracking-wider">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-                  <span>Destaque da Semana • Campanha Dia dos Pais</span>
-                </div>
-                <h4 className="font-serif text-2xl sm:text-3.5xl font-bold text-neutral-100 tracking-tight">
-                  Cesta Especial Dia dos Pais
-                </h4>
-                <p className="text-xs sm:text-sm text-neutral-300 max-w-xl font-sans leading-relaxed">
-                  Uma curadoria de puro carinho e sofisticação para surpreender seu herói. Acompanha opções de bebidas finas (Frisante, Espumante ou Vinho Espanhol), mix de queijos, charcutaria, grissini, trufas artesanais e embalagem box em MDF.
-                </p>
-              </div>
-              <a
-                href="#basket-cesta-especial-dia-dos-pais"
-                className="z-10 shrink-0 px-6 py-3.5 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-neutral-950 font-sans text-xs font-black uppercase tracking-widest rounded-xl shadow-lg flex items-center gap-2 cursor-pointer transition-all hover:scale-105 active:scale-95"
-              >
-                <span>Ver Cesta Promocional</span>
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
-
             {/* Header titles */}
             <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
               <div>
