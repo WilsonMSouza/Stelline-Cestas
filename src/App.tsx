@@ -347,7 +347,7 @@ export default function App() {
               <div className="inline-flex items-center gap-2.5 px-4.5 py-1.5 rounded-full border border-amber-500/35 bg-neutral-950/40 backdrop-blur-sm shadow-md">
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
                 <span className="text-[10px] font-bold tracking-[0.16em] text-amber-300 uppercase font-sans">
-                  Para melhor atendê-lo, antecipe seu pedido
+                  Para melhor atendê-lo, antecipe seu pedido.
                 </span>
               </div>
 
