@@ -32,7 +32,7 @@ export const PRODUCTS: Product[] = [
       { 
         label: "Tamanho P", 
         shortLabel: "Tam. P", 
-        price: 185.85,
+        price: 185.00,
         description: "Ideal para servir 1 pessoa com requinte e doçura na medida certa.",
         items: [
           "Mini bolo artesanal de laranja",
@@ -51,7 +51,7 @@ export const PRODUCTS: Product[] = [
       { 
         label: "Tamanho M", 
         shortLabel: "Tam. M", 
-        price: 253.05,
+        price: 253.00,
         description: "Perfeito para compartilhar (serve 2 a 3 pessoas).",
         items: [
           "Mini bolo artesanal de laranja",
@@ -79,7 +79,7 @@ export const PRODUCTS: Product[] = [
       { 
         label: "Tamanho M Único", 
         shortLabel: "Tam. M", 
-        price: 337.05,
+        price: 337.00,
         description: "Nossa seleção mais luxuosa com itens premium (serve 2 a 3 pessoas).",
         items: [
           "Bolo artesanal de laranja",
@@ -107,7 +107,7 @@ export const PRODUCTS: Product[] = [
       { 
         label: "Tamanho M", 
         shortLabel: "Tam. M", 
-        price: 284.55,
+        price: 284.00,
         description: "Sabores rústicos coloniais que resgatam o melhor da fazenda (serve 2 a 3 pessoas).",
         items: [
           "Bolo de laranja ou cenoura",
@@ -152,7 +152,7 @@ export const PRODUCTS: Product[] = [
       { 
         label: "Tamanho M Único", 
         shortLabel: "Tam. M", 
-        price: 291.90,
+        price: 291.00,
         description: "Uma inesquecível celebração da paixão e do afeto (serve 2 pessoas).",
         items: [
           "Pão de ló e croissant amanteigado",
@@ -179,7 +179,7 @@ export const PRODUCTS: Product[] = [
       {
         label: "Tamanho P",
         shortLabel: "Tam. P",
-        price: 180.60,
+        price: 180.00,
         description: "Pequenos momentos, grandes sorrisos (serve 1 pessoa).",
         items: [
           "Croissant amanteigado e pão de queijo",
@@ -260,7 +260,7 @@ export const PRODUCTS: Product[] = [
       {
         label: "Tamanho M Único",
         shortLabel: "Tam. M",
-        price: 249.90,
+        price: 249.00,
         description: "A combinação perfeita de salgados assados, doces, frios e bebidas sem glúten e sem lactose (serve 2 pessoas).",
         items: [
           "Empadinha (de frango ou de frango com palmito)",
@@ -287,7 +287,7 @@ export const PRODUCTS: Product[] = [
       {
         label: "Tamanho Único",
         shortLabel: "Tam. P",
-        price: 157.50,
+        price: 157.00,
         description: "Opção perfeita para demonstrar carinho em qualquer celebração (serve 1 pessoa).",
         items: [
           "Brinquedo de pelúcia (urso de 20cm de altura ou capivara de 20cm de altura)",
@@ -307,7 +307,7 @@ export const PRODUCTS: Product[] = [
       {
         label: "Tamanho Único",
         shortLabel: "Tam. P",
-        price: 157.50,
+        price: 157.00,
         description: "Uma opção elegante de presente memorável (serve 1 pessoa).",
         items: [
           "Copo térmico Stanley (350ml)",
