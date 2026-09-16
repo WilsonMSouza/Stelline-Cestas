@@ -161,7 +161,7 @@ export const PRODUCTS: Product[] = [
           "Frios especiais: queijo minas padrão, queijo muçarela, salame italiano e lombo canadense",
           "Geléia artesanal, requeijão ou manteiga",
           "Frutas da época e trufas",
-          "Suco de uva (long neck) gaseificado",
+          "Suco de uva (long neck)",
           "Drip coffee (café para coar)",
           "Sache de capuccino e Sache de chá",
           "Embalagem: caixa de MDF, em formato de coração (30x7cm), embalada em celofane e finalizada com laço de cetim; acompanha cartão de mensagem."
