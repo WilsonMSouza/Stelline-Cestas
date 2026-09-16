@@ -32,14 +32,14 @@ export const PRODUCTS: Product[] = [
       { 
         label: "Tamanho P", 
         shortLabel: "Tam. P", 
-        price: 159.00,
+        price: 185.85,
         description: "Ideal para servir 1 pessoa com requinte e doçura na medida certa.",
         items: [
           "Mini bolo artesanal de laranja",
           "Croissant amanteigado",
-          "Pão de queijo, bolacha artesanal, torradinhas e stroopwafel",
+          "Pão de queijo, biscoitos amanteigados, bolacha artesanal, torradinhas e stroopwafel",
           "Frios especiais fatiados: queijo minas padrão, queijo muçarela, salame italiano e lombo canadense",
-          "Geleia artesanal e requeijão",
+          "Geleia artesanal, requeijão ou manteiga",
           "Bombom artesanal e frutas da época",
           "Suco de uva integral (250 a 300 ml)",
           "Drip coffee especial gourmet",
@@ -51,14 +51,14 @@ export const PRODUCTS: Product[] = [
       { 
         label: "Tamanho M", 
         shortLabel: "Tam. M", 
-        price: 227.85,
+        price: 253.05,
         description: "Perfeito para compartilhar (serve 2 a 3 pessoas).",
         items: [
           "Mini bolo artesanal de laranja",
           "Croissant amanteigado",
-          "Pão de queijo, bolacha artesanal, torradinhas e pãozinho de nata",
+          "Pão de queijo, biscoitos amanteigados, bolacha artesanal, torradinhas e pãozinho de nata",
           "Frios especiais: queijo minas padrão, queijo muçarela, salame italiano e lombo canadense",
-          "Geleia artesanal e requeijão",
+          "Geleia artesanal, requeijão ou manteiga",
           "Bombom artesanal e frutas da época",
           "Suco de uva integral (250 a 300 ml)",
           "Drip coffee especial gourmet",
@@ -79,14 +79,14 @@ export const PRODUCTS: Product[] = [
       { 
         label: "Tamanho M Único", 
         shortLabel: "Tam. M", 
-        price: 299.00,
+        price: 337.05,
         description: "Nossa seleção mais luxuosa com itens premium (serve 2 a 3 pessoas).",
         items: [
           "Bolo artesanal de laranja",
           "Croissant amanteigado",
           "Pão de queijo com catupiry, torradinhas e pães caseirinhos pequenos",
           "Frios especiais: queijo minas padrão, muçarela ou gouda, salame italiano e lombo canadense",
-          "Geleia artesanal, requeijão e mel",
+          "Geleia artesanal, requeijão (ou manteiga) e mel",
           "Iogurte grego, granola, damasco e castanha",
           "Bombom Ferrero Rocher e frutas da época",
           "Suco de uva integral (500 ml)",
@@ -107,7 +107,7 @@ export const PRODUCTS: Product[] = [
       { 
         label: "Tamanho M", 
         shortLabel: "Tam. M", 
-        price: 247.00,
+        price: 284.55,
         description: "Sabores rústicos coloniais que resgatam o melhor da fazenda (serve 2 a 3 pessoas).",
         items: [
           "Bolo de laranja ou cenoura",
@@ -125,7 +125,7 @@ export const PRODUCTS: Product[] = [
       { 
         label: "Tamanho G", 
         shortLabel: "Tam. G", 
-        price: 289.00,
+        price: 311.00,
         description: "Versão farta com os sabores da fazenda (serve 3 a 4 pessoas).",
         items: [
           "Bolo de laranja ou cenoura",
@@ -152,14 +152,14 @@ export const PRODUCTS: Product[] = [
       { 
         label: "Tamanho M Único", 
         shortLabel: "Tam. M", 
-        price: 240.00,
+        price: 291.90,
         description: "Uma inesquecível celebração da paixão e do afeto (serve 2 pessoas).",
         items: [
           "Pão de ló e croissant amanteigado",
           "Cupcake e pãozinho de nata",
-          "Bolachas artesanais, pão de queijo, e torradinhas",
+          "Bolachas artesanais, biscoitos amanteigados, pão de queijo, e torradinhas",
           "Frios especiais: queijo minas padrão, queijo muçarela, salame italiano e lombo canadense",
-          "Geléia artesanal e requeijão",
+          "Geléia artesanal, requeijão ou manteiga",
           "Frutas da época e trufas",
           "Suco de uva (long neck) gaseificado",
           "Drip coffee (café para coar)",
@@ -179,7 +179,7 @@ export const PRODUCTS: Product[] = [
       {
         label: "Tamanho P",
         shortLabel: "Tam. P",
-        price: 187.00,
+        price: 180.60,
         description: "Pequenos momentos, grandes sorrisos (serve 1 pessoa).",
         items: [
           "Croissant amanteigado e pão de queijo",
@@ -226,7 +226,7 @@ export const PRODUCTS: Product[] = [
     id: "cesta-happy-hour-wine",
     name: "Cesta Happy Hour Wine",
     tagline: "Harmonização nobre e sofisticada com vinho ou espumante e queijos especiais",
-    description: "Uma experiência gastronômica requintada e envolvente. Oferece 3 opções de bebidas consagradas à sua escolha (Frisante italiano Giacondi Lambrusco, Espumante Garibaldi Moscatel ou Vinho Espanhol Condesa de Leganza), harmonizadas com mix de queijos nobres (muçarela, provolone, minas padrão e gouda), charcutaria selecionada (salame italiano e lombo canadense), castanhas nobres, pão caseirinho fatiado, requeijão cremoso, grissini, pretzel, trufas artesanais e mel. Apresentada com extremo requinte em um box redondo em MDF.",
+    description: "Uma experiência gastronômica requintada e envolvente. Oferece 3 opções de bebidas consagradas à sua escolha (Frisante italiano Giacondi Lambrusco, Espumante Garibaldi Moscatel ou Vinho Espanhol Condesa de Leganza), harmonizadas com mix de queijos nobres (muçarela, provolone, minas padrão e gouda), charcutaria selecionada (salame italiano e lombo canadense), castanhas nobres, pão caseirinho fatiado, requeijão cremoso , grissini, pretzel, trufas artesanais e mel. Apresentada com extremo requinte em um box redondo em MDF.",
     image: cestaHappyHourWineImg,
     badge: "Harmonização Nobre",
     sizes: [
@@ -241,7 +241,7 @@ export const PRODUCTS: Product[] = [
           "Charcutaria: salame italiano e lombo canadense",
           "Mix de castanha-do-pará e de caju",
           "1 pão caseirinho fatiado",
-          "Requeijão (40g)",
+          "Requeijão (40g) ou manteiga",
           "Grissini e pretzel",
           "Trufas artesanais e mel",
           "Embalagem: Box redondo em MDF"
@@ -260,7 +260,7 @@ export const PRODUCTS: Product[] = [
       {
         label: "Tamanho M Único",
         shortLabel: "Tam. M",
-        price: 237.00,
+        price: 249.90,
         description: "A combinação perfeita de salgados assados, doces, frios e bebidas sem glúten e sem lactose (serve 2 pessoas).",
         items: [
           "Empadinha (de frango ou de frango com palmito)",
