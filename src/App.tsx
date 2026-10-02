@@ -722,7 +722,7 @@ export default function App() {
                   </p>
                   <p className="flex items-center gap-1.5">
                     <span className="inline-block w-1.5 h-1.5 bg-amber-400 rounded-full"></span>
-                    Pedido com antecedência mínima de 24 horas.
+                    Pedidos com antecedência mínima de 24 horas.
                   </p>
                 </div>
 
