@@ -1,7 +1,7 @@
 import React from "react";
 import { AddonItem } from "../types";
 import { formatCurrency } from "../data";
-import { Coffee, Gift, Percent, Plus, Minus, Heart, Droplet, Beer } from "lucide-react";
+import { Coffee, Gift, Percent, Plus, Minus, Heart, Droplet, Beer, Sparkles } from "lucide-react";
 
 interface AddonCardProps {
   key?: React.Key;
@@ -25,6 +25,8 @@ export default function AddonCard({ addon, quantity, onAdd, onRemove }: AddonCar
         return <Heart className="w-7 h-7 text-amber-300" />;
       case "Droplet":
         return <Droplet className="w-7 h-7 text-amber-300" />;
+      case "Sparkles":
+        return <Sparkles className="w-7 h-7 text-amber-300" />;
       default:
         return <Gift className="w-7 h-7 text-amber-300" />;
     }
@@ -47,16 +49,18 @@ export default function AddonCard({ addon, quantity, onAdd, onRemove }: AddonCar
       )}
 
       {/* Hexagonal or circular icon backdrop */}
-      <div className="w-20 h-20 rounded-full bg-neutral-900 flex items-center justify-center mb-5 border border-neutral-800/80 group-hover:border-amber-500/40 transition-all duration-500 group-hover:scale-105 shadow-inner">
+      <div className="w-20 h-20 rounded-full bg-neutral-900 flex items-center justify-center mb-5 border border-neutral-800/80 group-hover:border-amber-500/40 transition-all duration-500 group-hover:scale-105 shadow-inner shrink-0">
         {renderIcon()}
       </div>
 
-      <h4 className="font-serif text-lg text-neutral-100 font-medium mb-1 tracking-tight">
-        {addon.name}
-      </h4>
-      <p className="text-amber-400 font-sans font-bold text-sm mb-6">
-        {formatCurrency(addon.price)}
-      </p>
+      <div className="flex-1 flex flex-col justify-between items-center w-full mb-5">
+        <h4 className="font-serif text-base sm:text-lg text-neutral-100 font-medium mb-2 tracking-tight leading-snug">
+          {addon.name}
+        </h4>
+        <p className="text-amber-400 font-sans font-bold text-sm mt-auto pt-2">
+          {formatCurrency(addon.price)}
+        </p>
+      </div>
 
       {/* Add / Remove controller */}
       <div className="flex items-center gap-2">

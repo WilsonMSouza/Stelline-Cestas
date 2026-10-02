@@ -189,6 +189,7 @@ export const PRODUCTS: Product[] = [
           "Frutas da época, creme de avelã e iogurte grego",
           "Suco de uva integral (250 a 300 ml) e achocolatado",
           "Doces decorativos",
+          "Itens Adicionais: Chaveiro de capivara ou adesivo de personagem infantil, com acréscimo de R$ 20,00.",
           "Opção de Embalagem 1: Caixa de MDF 20x20cm, embalada em celofane e finalizada com laço de cetim; acompanha cartão de mensagem.",
           "Opção de Embalagem 2: Sacola fosca de alça redonda, 27x23cm, finalizada com laço de cetim; acompanha cartão de mensagem."
         ]
@@ -322,7 +323,8 @@ export const PRODUCTS: Product[] = [
 export const ADDONS: AddonItem[] = [
   { id: "handcrafted-mug", name: "Xícara", price: 20.00, icon: "Coffee" },
   { id: "helium-balloons", name: "Balões Metálicos", price: 10.00, icon: "Celebration" },
-  { id: "long-neck-beer", name: "Cerveja Long Neck", price: 10.00, icon: "Beer" }
+  { id: "long-neck-beer", name: "Cerveja Long Neck", price: 10.00, icon: "Beer" },
+  { id: "chaveiro-capivara-adesivo", name: "Chaveiro de Capivara ou Adesivo de Personagem Infantil", price: 20.00, icon: "Sparkles" }
 ];
 
 export function formatCurrency(value: number): string {
