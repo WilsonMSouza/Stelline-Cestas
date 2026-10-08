@@ -15,6 +15,7 @@ export interface Product {
   sizes: SizeOption[];
   badge?: string; // e.g., "Mais Pedida", "Especial Dia dos Namorados"
   isSpecial?: boolean; // Highlighted bento logic
+  destaqueCampanha?: string; // e.g., "dia-das-criancas"
 }
 
 export interface AddonItem {

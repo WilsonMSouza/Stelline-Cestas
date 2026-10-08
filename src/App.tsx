@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { PRODUCTS, ADDONS, formatCurrency } from "./data";
 import { Product, SizeOption, CartItem, AddonCartItem } from "./types";
 import BasketCard from "./components/BasketCard";
@@ -218,6 +218,18 @@ export default function App() {
     return basketsSubtotal + addonsSubtotal;
   }
 
+  // Active campaign detection (reversível via flag no data.ts)
+  const campaignProduct = PRODUCTS.find((p) => p.destaqueCampanha === "dia-das-criancas");
+
+  // Reordering of products on Home: product with active campaign flag is placed in 1st position
+  const displayProducts = useMemo(() => {
+    return [...PRODUCTS].sort((a, b) => {
+      const aCamp = a.destaqueCampanha === "dia-das-criancas" ? 1 : 0;
+      const bCamp = b.destaqueCampanha === "dia-das-criancas" ? 1 : 0;
+      return bCamp - aCamp;
+    });
+  }, []);
+
   return (
     <div className="bg-[#16130b] text-[#eae1d4] min-h-screen font-sans antialiased overflow-x-hidden selection:bg-amber-400 selection:text-neutral-950">
       
@@ -343,12 +355,28 @@ export default function App() {
           <div className="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 xl:col-span-7 space-y-8">
               
-              {/* Delivery Availability Pills */}
-              <div className="inline-flex items-center gap-2.5 px-4.5 py-1.5 rounded-full border border-amber-500/35 bg-neutral-950/40 backdrop-blur-sm shadow-md">
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                <span className="text-[10px] font-bold tracking-[0.16em] text-amber-300 uppercase font-sans">
-                  Para melhor atendê-lo, seu pedido deve ser realizado com antecedência mínima de 24 h.
-                </span>
+              {/* Delivery Availability & Campaign Pills */}
+              <div className="flex flex-wrap items-center gap-2.5">
+                <div className="inline-flex items-center gap-2.5 px-4.5 py-1.5 rounded-full border border-amber-500/35 bg-neutral-950/40 backdrop-blur-sm shadow-md">
+                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span className="text-[10px] font-bold tracking-[0.16em] text-amber-300 uppercase font-sans">
+                    Para melhor atendê-lo, seu pedido deve ser realizado com antecedência mínima de 24 h.
+                  </span>
+                </div>
+                {campaignProduct && (
+                  <button
+                    onClick={() => {
+                      const el = document.getElementById(`basket-${campaignProduct.id}`);
+                      if (el) {
+                        el.scrollIntoView({ behavior: "smooth", block: "center" });
+                      }
+                    }}
+                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-amber-400/50 bg-amber-400/10 hover:bg-amber-400/25 backdrop-blur-sm text-amber-300 text-[10px] font-bold tracking-widest uppercase transition-all cursor-pointer shadow-sm active:scale-95"
+                  >
+                    <Sparkles className="w-3 h-3 text-amber-400 fill-amber-400" />
+                    <span>Especial Dia das Crianças</span>
+                  </button>
+                )}
               </div>
 
               {/* Majestic Editorial High-Contrast Headline */}
@@ -422,6 +450,126 @@ export default function App() {
           </div>
         </section>
 
+        {/* Campanha Dia das Crianças Banner (Reversível pelo flag destaqueCampanha) */}
+        {campaignProduct && (
+          <section className="py-6 px-6 md:px-12" id="campanha-dia-das-criancas">
+            <div className="max-w-7xl mx-auto">
+              <div className="relative overflow-hidden rounded-3xl border border-amber-400/40 bg-gradient-to-br from-[#241b12] via-[#1a140d] to-[#120e08] p-6 sm:p-10 md:p-12 shadow-[0_15px_45px_rgba(0,0,0,0.55)]">
+                
+                {/* Ambient celebratory glow & subtle starry accents */}
+                <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-amber-400/10 blur-[90px] pointer-events-none"></div>
+                <div className="absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-amber-500/10 blur-[80px] pointer-events-none"></div>
+                
+                <div className="absolute top-6 right-8 text-amber-300/20 pointer-events-none hidden sm:block animate-pulse">
+                  <Sparkles className="w-8 h-8" />
+                </div>
+                <div className="absolute bottom-6 right-1/4 text-amber-300/15 pointer-events-none hidden md:block">
+                  <Star className="w-5 h-5 fill-amber-300/10" />
+                </div>
+
+                <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                  
+                  {/* Left Column: Copy & CTA */}
+                  <div className="lg:col-span-7 space-y-5">
+                    
+                    {/* Badge Pill */}
+                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/15 border border-amber-400/35 backdrop-blur-md text-amber-300 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest shadow-sm">
+                      <Sparkles className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
+                      <span>Campanha Especial • 12 de Outubro</span>
+                    </div>
+
+                    {/* Exact campaign headline required */}
+                    <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-neutral-100 tracking-tight leading-[1.15]">
+                      Dia das Crianças:{" "}
+                      <span className="text-amber-400 italic font-medium block sm:inline">
+                        presenteie com sabor
+                      </span>
+                    </h2>
+
+                    {/* Persuasive copy */}
+                    <p className="text-[#d8cdb8] font-sans text-sm sm:text-base leading-relaxed max-w-xl text-justify">
+                      Encante os pequenos com a nossa experiência lúdica e deliciosa. A <strong className="text-amber-300 font-semibold">Cesta Kids</strong> harmoniza croissant amanteigado, pão de queijo quentinho, frutas frescas, doces finos e opções de mimos como o chaveiro da Capivara e personalização especial.
+                    </p>
+
+                    {/* CTA button leading to Cesta Kids */}
+                    <div className="pt-2 flex flex-wrap items-center gap-4">
+                      <button
+                        onClick={() => {
+                          const el = document.getElementById(`basket-${campaignProduct.id}`);
+                          if (el) {
+                            el.scrollIntoView({ behavior: "smooth", block: "center" });
+                            el.classList.add("ring-2", "ring-amber-400");
+                            setTimeout(() => {
+                              el.classList.remove("ring-2", "ring-amber-400");
+                            }, 2000);
+                          }
+                        }}
+                        className="px-6 sm:px-8 py-3.5 sm:py-4 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-neutral-950 font-sans text-xs font-black uppercase tracking-widest rounded-xl shadow-[0_4px_25px_rgba(242,202,80,0.35)] hover:shadow-[0_6px_30px_rgba(242,202,80,0.5)] flex items-center gap-2.5 cursor-pointer transition-all hover:-translate-y-0.5 select-none active:scale-95 group"
+                      >
+                        <span>Conhecer Cesta Kids</span>
+                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                      </button>
+
+                      <span className="text-[11px] uppercase tracking-wider text-amber-300/80 font-sans font-medium">
+                        A partir de <strong className="text-amber-300 font-bold text-sm font-sans">{formatCurrency(campaignProduct.sizes[0].price)}</strong>
+                      </span>
+                    </div>
+
+                  </div>
+
+                  {/* Right Column: Visual Preview Card */}
+                  <div className="lg:col-span-5 flex justify-center lg:justify-end">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        const el = document.getElementById(`basket-${campaignProduct.id}`);
+                        if (el) {
+                          el.scrollIntoView({ behavior: "smooth", block: "center" });
+                          el.classList.add("ring-2", "ring-amber-400");
+                          setTimeout(() => {
+                            el.classList.remove("ring-2", "ring-amber-400");
+                          }, 2000);
+                        }
+                      }}
+                      className="group relative rounded-2xl overflow-hidden border border-amber-400/40 bg-neutral-950/80 p-3 hover:border-amber-400 transition-all cursor-pointer shadow-2xl max-w-sm w-full text-left"
+                    >
+                      <div className="relative aspect-[4/3] rounded-xl overflow-hidden mb-3">
+                        <img 
+                          src={campaignProduct.image} 
+                          alt={campaignProduct.name}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <span className="absolute top-2.5 left-2.5 px-2.5 py-1 text-[9px] font-bold uppercase tracking-wider rounded-full bg-amber-400 text-neutral-950 shadow-md flex items-center gap-1">
+                          <Sparkles className="w-3 h-3 fill-neutral-950" />
+                          Especial Dia das Crianças
+                        </span>
+                      </div>
+                      <div className="px-1.5 pb-1 flex justify-between items-end">
+                        <div>
+                          <span className="text-[10px] uppercase font-bold tracking-wider text-amber-400/80 block">
+                            Destaque da Edição
+                          </span>
+                          <h4 className="font-serif text-lg font-bold text-neutral-100 group-hover:text-amber-300 transition-colors">
+                            {campaignProduct.name}
+                          </h4>
+                        </div>
+                        <div className="text-right">
+                          <span className="text-[10px] text-neutral-400 block font-sans">Valor</span>
+                          <span className="text-amber-400 font-bold font-sans text-sm">
+                            {formatCurrency(campaignProduct.sizes[0].price)}
+                          </span>
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Bento Grid Product Catalog */}
         <section className="py-24 px-6 md:px-12" id="cardapio">
           <div className="max-w-7xl mx-auto">
@@ -441,7 +589,7 @@ export default function App() {
 
             {/* 2 Baskets per row on desktop layout (Cesta Romântica style) */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {PRODUCTS.map((prod) => (
+              {displayProducts.map((prod) => (
                 <BasketCard 
                   key={prod.id} 
                   product={prod} 

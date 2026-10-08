@@ -17,29 +17,51 @@ export default function BasketCard({ product, onAddToCart }: BasketCardProps) {
   // Sticky click-to-view details option state
   const [showDetails, setShowDetails] = useState(false);
 
+  // Campaign highlight detection
+  const isCampaign = product.destaqueCampanha === "dia-das-criancas";
+  const displayBadge = isCampaign ? "Especial Dia das Crianças" : product.badge;
+
   // Determine which size's details we should currently preview
   const activeContentSize = hoveredSize || (showDetails ? selectedSize : null);
 
   return (
     <article
       id={`basket-${product.id}`}
-      className={`relative group overflow-hidden rounded-2xl flex flex-col md:flex-row transition-all duration-300 border bg-neutral-950/40 backdrop-blur-md hover:border-amber-500/45 hover:shadow-[0_4px_30px_rgba(242,202,80,0.06)] ${
-        product.isSpecial 
-          ? "border-yellow-700/30" 
-          : "border-amber-900/20"
+      className={`relative group overflow-hidden rounded-2xl flex flex-col md:flex-row transition-all duration-300 border backdrop-blur-md hover:border-amber-400 hover:shadow-[0_4px_35px_rgba(242,202,80,0.12)] ${
+        isCampaign
+          ? "border-amber-400/55 bg-gradient-to-br from-[#1d1710] via-neutral-950/70 to-neutral-950/40 shadow-[0_0_35px_rgba(245,158,11,0.14)] ring-1 ring-amber-400/30"
+          : product.isSpecial 
+          ? "border-yellow-700/30 bg-neutral-950/40" 
+          : "border-amber-900/20 bg-neutral-950/40"
       }`}
     >
+      {/* Subtle celebratory stars / confetes background texture for campaign */}
+      {isCampaign && (
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-10">
+          <span className="absolute top-2 right-1/4 text-amber-300/15 text-xs select-none">✦</span>
+          <span className="absolute bottom-4 left-1/3 text-amber-300/15 text-sm select-none">★</span>
+          <span className="absolute top-1/2 right-4 text-amber-300/10 text-xs select-none">✦</span>
+          <div className="absolute -top-16 -right-16 w-36 h-36 bg-amber-400/10 rounded-full blur-2xl pointer-events-none"></div>
+        </div>
+      )}
+
       {/* Badge Ribbon */}
-      {product.badge && (
+      {displayBadge && (
         <span
-          className={`absolute top-4 left-4 z-30 px-3.5 py-1.5 text-[10px] font-semibold tracking-widest uppercase rounded-full border backdrop-blur-md flex items-center gap-1.5 ${
-            product.isSpecial
+          className={`absolute top-4 left-4 z-30 px-3.5 py-1.5 text-[10px] font-semibold tracking-widest uppercase rounded-full border backdrop-blur-md flex items-center gap-1.5 transition-transform duration-300 group-hover:scale-105 ${
+            isCampaign
+              ? "bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 text-neutral-950 border-amber-200 font-bold shadow-[0_4px_18px_rgba(245,158,11,0.35)] ring-1 ring-amber-300/60"
+              : product.isSpecial
               ? "bg-red-950/85 text-red-300 border-red-850/40"
               : "bg-neutral-900/85 text-amber-300 border-amber-500/20"
           }`}
         >
-          {product.isSpecial ? <Heart className="w-3 h-3 fill-current" /> : null}
-          {product.badge}
+          {isCampaign ? (
+            <Sparkles className="w-3.5 h-3.5 text-neutral-950 fill-neutral-950" />
+          ) : product.isSpecial ? (
+            <Heart className="w-3 h-3 fill-current" />
+          ) : null}
+          {displayBadge}
         </span>
       )}
 

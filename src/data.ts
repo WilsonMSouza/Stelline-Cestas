@@ -173,6 +173,7 @@ export const PRODUCTS: Product[] = [
     id: "cesta-kids",
     name: "Cesta Kids",
     tagline: "A diversão e o sabor que encantam",
+    destaqueCampanha: "dia-das-criancas",
     description: "Uma experiência gastronômica e lúdica, desenhada para encantar os pequenos. A Cesta Kids harmoniza sabores e delicadeza: croissant amanteigado, pão de queijo, frutas frescas da estação e doces especiais. A seleção inclui creme de avelã, iogurte grego, bebida infantil e queijos esculpidos de forma criativa, compondo um cenário que estimula a imaginação e torna a surpresa inesquecível. Para uma experiência ainda mais exclusiva, oferecemos nos Itens Adicionais o nosso chaveiro da Capivara ou um adesivo temático. A Cesta Kids também pode ser personalizada com a foto da criança. Para garantir a personalização, solicitamos o envio do material para a nossa equipe com antecedência.",
     image: cestaKidsImg,
     sizes: [
