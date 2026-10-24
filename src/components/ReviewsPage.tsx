@@ -35,80 +35,90 @@ const INITIAL_REVIEWS: LocalReview[] = [
     name: "Mariana Silveira",
     location: "Cascavel - Centro",
     rating: 5,
-    date: "12 de Junho, 2026",
+    date: "21 de Outubro de 2026",
     basket: "Cesta Amanhecer Premium",
-    comment: "Superou todas as minhas expectativas! Comprei a Cesta Amanhecer Premium para o aniversário da minha mãe e ela ficou encantada. A apresentação é de um luxo sem igual, tudo fresquinho e delicioso. O drip coffee é maravilhoso!",
-    likes: 14
+    comment: "Superou todas as expectativas! Encomendei a Cesta Amanhecer Premium para as Bodas de Prata dos meus pais e foi um momento emocionante. O drip coffee artesanal, os queijos finos e os croissants chegaram com frescor absoluto e aroma divino. A apresentação na caixa com laço de cetim é um espetáculo à parte. Entrega pontualíssima no Centro!",
+    likes: 18
   },
   {
     id: "rev-2",
-    name: "Rodrigo G. Souza",
-    location: "Cascavel - Parque Verde",
+    name: "Guilherme Becker",
+    location: "Cascavel - Região do Lago",
     rating: 5,
-    date: "08 de Junho, 2026",
-    basket: "Cesta Romântica",
-    comment: "Surpreendi minha noiva com a Cesta Romântica no nosso aniversário de namoro. O pão de queijo estava quentinho, as frutas selecionadas sem nenhuma imperfeição e a embalagem em mdf formato de coração é impecável. Vale cada centavo pela experiência de tirar o fôlego.",
-    likes: 9
+    date: "17 de Outubro de 2026",
+    basket: "Cesta Happy Hour Beer",
+    comment: "A Cesta Happy Hour Beer foi o presente perfeito de aniversário para meu sócio! As cervejas chegaram trincando de geladas na caixa cartonada redonda. Os grissinis crocantes, o mix de queijos provolone e minas padrão com salame italiano e as trufas artesanais harmonizaram perfeitamente. Experiência gastronômica impecável!",
+    likes: 15
   },
   {
     id: "rev-3",
     name: "Beatriz Mendes",
     location: "Cascavel - Neva",
     rating: 5,
-    date: "02 de Junho, 2026",
+    date: "12 de Outubro de 2026",
     basket: "Cesta Kids",
-    comment: "A Cesta Kids é simplesmente o presente mais fofo e bem elaborado! Comprei para o meu afilhado e ele amou o croissant de chocolate, as guloseimas e o bilhete personalizado. Atendimento nota 10, super prestativas no WhatsApp.",
-    likes: 6
+    comment: "Presenteei meu sobrinho no Dia das Crianças com a Cesta Kids e foi pura alegria! Ele ficou encantado com os mini donuts coloridos, o croissant de chocolate e o mimo. O atendimento no WhatsApp foi incrivelmente atencioso e o cartão personalizado veio lindo. Stelline é sinônimo de afeto!",
+    likes: 12
   },
   {
     id: "rev-4",
-    name: "Renato Alencar",
-    location: "Cascavel - Região do Lago",
+    name: "Dra. Camila Fontes",
+    location: "Cascavel - Country",
     rating: 5,
-    date: "28 de Maio, 2026",
-    basket: "Cesta Happy Hour",
-    comment: "A Cesta Happy Hour salvou nosso final de semana de celebração! As cervejas chegaram trincando de geladas, os queijos de excelente qualidade e os grissinis super crocantes. Um carinho em forma de presente gourmet.",
-    likes: 11
+    date: "08 de Outubro de 2026",
+    basket: "Cesta Happy Hour Wine",
+    comment: "Simplesmente deslumbrante a Cesta Happy Hour Wine no box redondo em MDF! Escolhi o vinho Condesa de Leganza e a harmonização com o mix de queijos nobres (gouda, provolone e minas padrão), charcutaria refinada e o pão caseirinho fatiado com mel foi elogiada por todos. Sofisticação pura!",
+    likes: 14
   },
   {
     id: "rev-5",
-    name: "Juliana de Castro",
-    location: "Cascavel - Ciro Nardi",
+    name: "Rodrigo G. Souza",
+    location: "Cascavel - Parque Verde",
     rating: 5,
-    date: "22 de Maio, 2026",
-    basket: "Cesta Colonial",
-    comment: "Atendimento de alta classe e as entregas feitas de carro dão uma segurança fantástica para que a cesta chegue 100% perfeita. A Cesta Colonial M traz aquele sabor de fazenda extremamente refinado e nostálgico. Recomendo sem ressalvas!",
-    likes: 8
+    date: "28 de Setembro de 2026",
+    basket: "Cesta Romântica",
+    comment: "Surpreendi minha noiva logo às 7h da manhã com a Cesta Romântica no nosso aniversário de noivado. Os pãezinhos artesanais e o pão de queijo quentinho, as frutas selecionadas sem defeito e a caixa de coração em MDF com balão metalizado... ela chorou de emoção! Vale cada centavo pelo padrão de excelência.",
+    likes: 11
   },
   {
     id: "rev-6",
-    name: "Patrícia Werner",
-    location: "Cascavel - Cancelli",
+    name: "Juliana de Castro",
+    location: "Cascavel - Ciro Nardi",
     rating: 5,
-    date: "15 de Maio, 2026",
-    basket: "Cesta Presente para Ela",
-    comment: "Fiz o pedido em cima da hora e me atenderam com um carinho enorme e muita agilidade. A Cesta Presente para Ela é super delicada, sofisticada e charmosa. Parabéns pela excelência e o extremo capricho de toda equipe.",
-    likes: 5
+    date: "20 de Setembro de 2026",
+    basket: "Cesta Colonial",
+    comment: "A entrega feita de carro com todo cuidado fez toda a diferença para os produtos chegarem intactos e fresquíssimos. A Cesta Colonial traz aquele sabor afetivo de fazenda com requinte gourmet: geleia artesanal, bolo fofinho e frios nobres fatiados fininhos. Uma experiência acolhedora que encantou a família toda.",
+    likes: 9
   },
   {
     id: "rev-7",
-    name: "Gabriel Dornelles",
-    location: "Cascavel - Centro",
-    rating: 4,
-    date: "04 de Maio, 2026",
-    basket: "Cesta Presente para Ele",
-    comment: "Comprei o presente para Ele (que acompanha o copo Stanley) para presentear o meu pai. Ele usa o copo todos os dias e elogiou demais o drip coffee. Um presente diferenciado, moderno e de muito bom gosto!",
-    likes: 4
+    name: "Fernanda Vasconcellos",
+    location: "Cascavel - Recanto Tropical",
+    rating: 5,
+    date: "11 de Setembro de 2026",
+    basket: "Cesta Free - Sem glúten e Sem lactose",
+    comment: "Encontrar uma opção sem glúten e sem lactose com tanto capricho e sabor parecia impossível até conhecer a Stelline! Os salgados assados artesanais são deliciosos, o bolo de pote e os frios especiais são incríveis. Minha irmã tem restrição severa e sentiu todo o acolhimento e segurança em cada item.",
+    likes: 10
   },
   {
     id: "rev-8",
-    name: "Amanda Rocha",
-    location: "Cascavel - Parque Verde",
+    name: "Patrícia Werner",
+    location: "Cascavel - Cancelli",
     rating: 5,
-    date: "29 de Abril, 2026",
-    basket: "Cesta Amanhecer",
-    comment: "Tudo absolutamente maravilhoso. O bolo artesanal de laranja é extremamente fofinho e perfumado. Os frios são de marcas nobres e de ótima apresentação, tudo muito fresquinho e bem vedado. Stelline Cestas é a melhor de Cascavel disparada!",
-    likes: 12
+    date: "03 de Setembro de 2026",
+    basket: "Cesta Presente - Para Ela",
+    comment: "Fiz o pedido para o aniversário da minha melhor amiga. A Cesta Para Ela com a pelúcia e a caixa de Ferrero Rocher com balão em coração causou comoção no trabalho dela. Tudo embrulhado com um primor sem igual e pontualidade britânica na entrega!",
+    likes: 8
+  },
+  {
+    id: "rev-9",
+    name: "Gabriel Dornelles",
+    location: "Cascavel - Coqueiral",
+    rating: 5,
+    date: "28 de Agosto de 2026",
+    basket: "Cesta Presente - Para Ele",
+    comment: "Dei a Cesta Para Ele com o copo térmico Stanley preto e os bombons Ferrero para o meu pai. Ele usa o copo diariamente e elogiou o capricho da caixa box com cartão caligrafado. Atendimento rápido e muito gentil pelo WhatsApp!",
+    likes: 7
   }
 ];
 
@@ -119,26 +129,25 @@ interface ReviewsPageProps {
 
 export default function ReviewsPage({ onBackToHome, onScrollToElement }: ReviewsPageProps) {
   const [reviews, setReviews] = useState<LocalReview[]>(() => {
-    const saved = localStorage.getItem("stelline_client_reviews");
+    const saved = localStorage.getItem("stelline_client_reviews_v2");
     if (saved) {
       try {
         const parsed = JSON.parse(saved) as LocalReview[];
         
-        // 1. Map existing reviews, merging latest code definitions from INITIAL_REVIEWS to reflect changes
+        // 1. Map existing reviews, updating data with latest code definitions from INITIAL_REVIEWS
         const updatedParsed = parsed.map(savedRev => {
           const initialMatch = INITIAL_REVIEWS.find(r => r.id === savedRev.id);
           if (initialMatch) {
             return {
-              ...savedRev,
               ...initialMatch,
-              likes: savedRev.likes, // preserve interactive user state
-              hasLiked: savedRev.hasLiked
+              likes: savedRev.likes ?? initialMatch.likes,
+              hasLiked: savedRev.hasLiked ?? false
             };
           }
           return savedRev;
         });
 
-        // 2. Safely add any new reviews added to INITIAL_REVIEWS that are not yet in the browser's storage
+        // 2. Add any new initial reviews
         const missingInitial = INITIAL_REVIEWS.filter(init => !parsed.some(p => p.id === init.id));
         
         return [...updatedParsed, ...missingInitial];
@@ -161,7 +170,7 @@ export default function ReviewsPage({ onBackToHome, onScrollToElement }: Reviews
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem("stelline_client_reviews", JSON.stringify(reviews));
+    localStorage.setItem("stelline_client_reviews_v2", JSON.stringify(reviews));
   }, [reviews]);
 
   // Handle Like Increment
@@ -544,8 +553,8 @@ export default function ReviewsPage({ onBackToHome, onScrollToElement }: Reviews
                     <option value="Cesta Happy Hour Beer">Cesta Happy Hour Beer</option>
                     <option value="Cesta Happy Hour Wine">Cesta Happy Hour Wine</option>
                     <option value="Cesta Free - Sem glúten e Sem lactose">Cesta Free - Sem glúten e Sem lactose</option>
-                    <option value="Cesta Presente para Ela">Cesta Presente para Ela</option>
-                    <option value="Cesta Presente para Ele">Cesta Presente para Ele</option>
+                    <option value="Cesta Presente - Para Ela">Cesta Presente - Para Ela</option>
+                    <option value="Cesta Presente - Para Ele">Cesta Presente - Para Ele</option>
                   </select>
                 </div>
 

@@ -646,47 +646,71 @@ export default function App() {
             {/* Right Column: Teaser cards representation of 2 actual top reviews */}
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
               
-              <div className="bg-neutral-950/60 p-6 rounded-2xl border border-neutral-900 shadow-xl relative overflow-hidden flex flex-col justify-between h-full">
+              {/* Teaser 1: Mariana Silveira */}
+              <div className="bg-neutral-950/60 p-6 rounded-2xl border border-neutral-900 shadow-xl relative overflow-hidden flex flex-col justify-between h-full hover:border-amber-500/20 transition-all duration-300">
                 <div className="space-y-4">
-                  <div className="flex items-center gap-1">
-                    {[1, 2, 3, 4, 5].map((s) => (
-                      <Star key={s} className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
-                    ))}
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-1">
+                      {[1, 2, 3, 4, 5].map((s) => (
+                        <Star key={s} className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
+                      ))}
+                    </div>
+                    <time className="text-[10px] font-mono text-neutral-400">
+                      21 de Outubro, 2026
+                    </time>
+                  </div>
+                  <div className="inline-block px-2.5 py-0.5 rounded bg-neutral-900/80 border border-neutral-800 text-[10px] text-amber-400/90 font-medium">
+                    Cesta Amanhecer Premium
                   </div>
                   <p className="text-xs sm:text-sm text-neutral-300 italic font-sans text-justify font-light leading-relaxed">
-                    "Superou todas as minhas expectativas! Comprei a Cesta Amanhecer Premium para o aniversário da minha mãe e ela ficou encantada. Apresentação impecável e produtos super frescos!"
+                    "Superou todas as expectativas! Encomendei para as Bodas de Prata dos meus pais e foi pura emoção. Drip coffee artesanal, queijos finos e apresentação com laço de cetim de altíssimo luxo!"
                   </p>
                 </div>
-                <div className="pt-4 mt-6 border-t border-neutral-900/60 flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-amber-400/10 text-amber-400 border border-amber-500/10 flex items-center justify-center font-serif text-xs font-bold">
-                    MS
+                <div className="pt-4 mt-6 border-t border-neutral-900/60 flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-full bg-amber-400/10 text-amber-400 border border-amber-500/20 flex items-center justify-center font-serif text-xs font-bold">
+                      MS
+                    </div>
+                    <div>
+                      <h5 className="text-xs font-serif font-bold text-neutral-200">Mariana Silveira</h5>
+                      <p className="text-[9px] text-neutral-500 font-sans font-medium">Cascavel - Centro</p>
+                    </div>
                   </div>
-                  <div>
-                    <h5 className="text-xs font-serif font-bold text-neutral-200">Mariana Silveira</h5>
-                    <p className="text-[9px] text-neutral-500 font-sans font-medium">Cascavel - Centro</p>
-                  </div>
+                  <span className="text-[9px] font-bold text-green-400/90 font-mono">✓ Verificado</span>
                 </div>
               </div>
 
-              <div className="bg-neutral-950/60 p-6 rounded-2xl border border-neutral-900 shadow-xl relative overflow-hidden flex flex-col justify-between h-full">
+              {/* Teaser 2: Guilherme Becker */}
+              <div className="bg-neutral-950/60 p-6 rounded-2xl border border-neutral-900 shadow-xl relative overflow-hidden flex flex-col justify-between h-full hover:border-amber-500/20 transition-all duration-300">
                 <div className="space-y-4">
-                  <div className="flex items-center gap-1">
-                    {[1, 2, 3, 4, 5].map((s) => (
-                      <Star key={s} className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
-                    ))}
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-1">
+                      {[1, 2, 3, 4, 5].map((s) => (
+                        <Star key={s} className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
+                      ))}
+                    </div>
+                    <time className="text-[10px] font-mono text-neutral-400">
+                      17 de Outubro, 2026
+                    </time>
+                  </div>
+                  <div className="inline-block px-2.5 py-0.5 rounded bg-neutral-900/80 border border-neutral-800 text-[10px] text-amber-400/90 font-medium">
+                    Cesta Happy Hour Beer
                   </div>
                   <p className="text-xs sm:text-sm text-neutral-300 italic font-sans text-justify font-light leading-relaxed">
-                    "Surpreendi minha noiva com a Cesta Romântica no nosso aniversário de namoro. Pão de queijo quentinho, frutas perfeitas e embalagem em MDF de coração maravilhosa!"
+                    "Presenteei meu sócio com a Cesta Happy Hour Beer. As cervejas chegaram trincando de geladas na caixa cartonada redonda. Grissinis crocantes e queijos perfeitos. Impressionante!"
                   </p>
                 </div>
-                <div className="pt-4 mt-6 border-t border-neutral-900/60 flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-amber-400/10 text-amber-400 border border-amber-500/10 flex items-center justify-center font-serif text-xs font-bold">
-                    RS
+                <div className="pt-4 mt-6 border-t border-neutral-900/60 flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-full bg-amber-400/10 text-amber-400 border border-amber-500/20 flex items-center justify-center font-serif text-xs font-bold">
+                      GB
+                    </div>
+                    <div>
+                      <h5 className="text-xs font-serif font-bold text-neutral-200">Guilherme Becker</h5>
+                      <p className="text-[9px] text-neutral-500 font-sans font-medium">Cascavel - Região do Lago</p>
+                    </div>
                   </div>
-                  <div>
-                    <h5 className="text-xs font-serif font-bold text-neutral-200">Rodrigo G. Souza</h5>
-                    <p className="text-[9px] text-neutral-500 font-sans font-medium">Parque Verde, Cascavel</p>
-                  </div>
+                  <span className="text-[9px] font-bold text-green-400/90 font-mono">✓ Verificado</span>
                 </div>
               </div>
 
