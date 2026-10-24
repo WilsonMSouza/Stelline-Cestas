@@ -543,6 +543,11 @@ export default function App() {
                           <Sparkles className="w-3 h-3 fill-neutral-950" />
                           Especial Dia das Crianças
                         </span>
+                        <div className="absolute bottom-2 left-2 right-2 pointer-events-none select-none">
+                          <span className="inline-block text-[8.5px] leading-tight text-neutral-300/85 bg-neutral-950/65 backdrop-blur-sm px-2 py-0.5 rounded border border-neutral-800/40 font-sans">
+                            Foto ilustrativa. O produto final pode sofrer pequenas variações de cor e apresentação.
+                          </span>
+                        </div>
                       </div>
                       <div className="px-1.5 pb-1 flex justify-between items-end">
                         <div>

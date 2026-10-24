@@ -77,6 +77,13 @@ export default function BasketCard({ product, onAddToCart }: BasketCardProps) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/70 via-transparent to-transparent opacity-60"></div>
 
+        {/* Microlegenda discreta de foto ilustrativa (Modelo A) */}
+        <div className="absolute bottom-2.5 left-2.5 right-2.5 z-10 pointer-events-none select-none">
+          <span className="inline-block text-[9.5px] sm:text-[10px] leading-tight text-neutral-300/85 bg-neutral-950/65 backdrop-blur-sm px-2.5 py-1 rounded border border-neutral-800/40 shadow-sm font-sans">
+            Foto ilustrativa. O produto final pode sofrer pequenas variações de cor e apresentação.
+          </span>
+        </div>
+
         {/* Dynamic Deluxe Glassmorphism Content Checklist */}
         {activeContentSize && (
           <div className="absolute inset-0 bg-neutral-950/95 backdrop-blur-lg p-5 sm:p-6 flex flex-col justify-start animate-fade-in z-20 border-r border-amber-950/10">
